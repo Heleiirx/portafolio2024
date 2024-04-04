@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Cover from "./pages/cover";
+import AboutMe from "./pages/aboutMe";
+import Navegacion from "./components/navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>PAGE <div className="tsx"></div></h1>
+    <main>
+      <Navegacion/>
+      <Cover></Cover>
+      <AboutMe></AboutMe>
     </main>
   );
 }
