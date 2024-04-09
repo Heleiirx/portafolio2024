@@ -8,8 +8,10 @@ import Image from 'next/image'
 
 export default function AboutMe(){
     return(
-        <div className="flex min-h-screen items-center gap-8 justify-between ">
-            <div className="flex flex-col w-1/2 h-full gap-y-1.5 justify-between items-center">
+        <div className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
+        lg:justify-between lg:flex-row lg:gap-8">
+            <div className="flex flex-col w-11/12 h-full gap-y-1.5 justify-between items-center
+            lg:w-1/2">
                 <h1 className="w-3/4 text-6xl">HOLA,</h1>
                 <h2 className="w-3/4 text-6xl">Soy Itzel!</h2>
                 <p className="font-mono w-3/4 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c</p>
@@ -19,20 +21,28 @@ export default function AboutMe(){
                     <Link size="lg" showAnchorIcon href="#" anchorIcon={<MdEmail className="size-9" />}></Link>
                 </div>
             </div>
-            <div className="flex flex-col w-1/2 items-center relative">
+            <div className="flex flex-col w-11/12 items-center relative
+            lg:w-1/2">
                 <div className="w-3/4 relative 
-                before:content-['☆'] before:text-9xl before:absolute before:rotate-12 before:top-12 before:left-8
-                after:content-['☆'] after:text-9xl after:absolute after:rotate-120 after:bottom-1 after:end-6 after:rotate-45
+                before:content-['☆'] before:text-9xl before:absolute before:rotate-12 before:top-0 before:right-2/3
+                after:content-['☆'] after:text-9xl after:absolute after:rotate-120 after:rotate-45 after:bottom-0 after:left-2/3
+                lg:before:top-12 lg:before:right-3/4 lg:after:bottom-1 lg:after:left-3/4
                 ">
-                    <div className="w-1/2 rounded-full h-16 bg-primary text-3xl p-2 text-center
-                    absolute top-48 left-0 text-background tracking-wider">FrontEnd</div>
+                    <span className="w-1/2 rounded-full h-16 bg-primary text-2xl p-2 text-center
+                    absolute top-48 right-2/3 text-background tracking-wider
+                    lg:text-3xl lg:top-48">
+                        FrontEnd
+                    </span>
                     <Image
                     src={Bokuto}
                     alt="Picture of the author "
                     className="w-fill"
                     />
-                    <div className="w-1/2 rounded-full h-16 bg-primary text-3xl p-2 text-center
-                    absolute right-2 bottom-32 text-background tracking-wider">Developer</div>
+                    <span className="w-1/2 rounded-full h-16 bg-primary text-2xl p-2 text-center
+                    absolute left-2/3 bottom-32 text-background tracking-wider
+                    lg:text-3xl bottom-32">
+                        Developer
+                    </span>
                 </div>
             </div>
         </div>
