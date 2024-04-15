@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar, FaRegStar , FaLinkedin, FaGithub   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import {Link} from "@nextui-org/react";
-import Bokuto from '@/Bokuto.png'
+import Bokuto from '@/img/Bokuto.png'
 import Image from 'next/image'
 
 

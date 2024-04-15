@@ -5,7 +5,7 @@ export default function Banner(props:any){
     }
     
     return(
-        <div className={`w-full ${props.background} text-background overflow-hidden absolute top-0 inline-flex flex-nowrap gap-4`}>
+        <div className={`w-screen ${props.background} text-background overflow-hidden relative top-0 inline-flex flex-nowrap gap-4`}>
             <ul className="flex gap-4 max-w-none justify-center py-12 text-5xl items-center text-center text-nowrap tracking-wider animate-scrollW w-fit">
                 {listaBanner}
             </ul>
