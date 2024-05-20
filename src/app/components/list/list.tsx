@@ -8,7 +8,7 @@ export default function List({content, title, flexDirection}:any){
             <ul className={`font-mono flex flex-${flexDirection} gap-3`}>
                 {content.map((item :any) => {
                     return(
-                    <div key={item.index}>
+                    <div key={item.id}>
                         <li className="font-mono list-none first-line:tracking-widest
                         first-letter:text-3xl first-letter:font-bold
                         first-letter:mr-3 first-letter:float-left first-letter:text-secondary">☆{item.title}</li>

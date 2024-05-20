@@ -37,6 +37,7 @@ export default function AboutMe(){
                     src={Bokuto}
                     alt="Picture of the author "
                     className="w-fill"
+                    priority
                     />
                     <span className="w-1/2 rounded-full h-16 bg-primary text-2xl p-2 text-center
                     absolute left-2/3 bottom-32 text-background tracking-wider

@@ -31,8 +31,7 @@ const config: Config = {
       light: {
         colors: {
           background: "#FFFFFF",
-          foreground: "#11181C",
-          content1: "#9F7AEA", 
+          foreground: "#11181C", 
           primary: {
             foreground: "#9F7AEA",
             DEFAULT: "#ED64A6",
@@ -46,6 +45,7 @@ const config: Config = {
           warning: {
             DEFAULT: "#0A3871",
           },
+           
         },
       },
       dark: {
@@ -53,7 +53,7 @@ const config: Config = {
           background: "#000000", // or DEFAULT
           foreground: "#ECEDEE", // or 50 to 900 DEFAULT
           primary: {
-            foreground: "#FFFFFF",
+            foreground: "#FFFFFF", //Es el texto
             DEFAULT: "#006FEE",
           },
         },

@@ -1,7 +1,7 @@
 export default function Banner(props:any){
     let listaBanner = [];
     for (let i = 0; i<4; i++){
-        listaBanner.push(<li>{props.bannerText}</li>)
+        listaBanner.push(<li key={i}>{props.bannerText}</li>)
     }
     
     return(
