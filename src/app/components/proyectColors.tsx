@@ -11,8 +11,8 @@ export default function ProyectColors({colors}:any){
                 {
                     colors.map((item:any, index:number)=>{
                         return(
-                            <Tooltip content={item} key={index}>
-                                <MyButton color={item} size="xs"></MyButton>
+                            <Tooltip content={item.rgb} key={index}>
+                                <MyButton color={item.color} size="xs"></MyButton>
                             </Tooltip>
                         )
                     })

@@ -9,7 +9,7 @@ import desktopImg from '@/img/encriptadorDesktop.png';
 export default function Encriptador(){
     const proyects = useContext(proyectsArr);
     const encriptador= proyects[0];
-    const colores:string[] = encriptador.colors;
+    const colores:object[] = encriptador.colors;
 
     return<div className="flex flex-col">
         <h1>{encriptador.title}</h1>
