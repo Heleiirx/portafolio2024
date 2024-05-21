@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import {Tooltip, Button} from "@nextui-org/react";
-import { MyButton } from "./MyPills";
+import { MyButton } from "./MyButton";
 
 export default function ProyectColors({colors}:any){
     console.log(colors);
