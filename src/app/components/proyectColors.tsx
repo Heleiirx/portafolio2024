@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import {Tooltip, Button} from "@nextui-org/react";
+import { MyButton } from "./MyPills";
 
 export default function ProyectColors({colors}:any){
     console.log(colors);
@@ -11,7 +12,7 @@ export default function ProyectColors({colors}:any){
                     colors.map((item:any, index:number)=>{
                         return(
                             <Tooltip content={item} key={index}>
-                                <div className={`bg-[#${item}] text-primary size-20`}></div>
+                                <MyButton color={item} size="xs"></MyButton>
                             </Tooltip>
                         )
                     })

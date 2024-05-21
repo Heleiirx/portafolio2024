@@ -23,7 +23,7 @@ export const proyectsArr = createContext<proyect[]>([
         description:'Aplicacion que toma las vocales del texto ingresado y las sustituye por un texto determinado o viceversa.',
         primaryColor:'0A3871',
         skills:['HTML','CSS','JavaScript','Git','Github'],
-        colors:['0A3871','D8DFE8'],
+        colors:['encriptador1','encriptador2'],
         repoURL:'https://github.com/Heleiirx/Portfolio',
         pageURL:'https://heleiirx.github.io/encriptador/',
     },
