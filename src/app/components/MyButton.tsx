@@ -5,6 +5,12 @@ export const MyButton = extendVariants(Button, {
     color: {
       encriptador1: "text-[#000] bg-[#0A3871]",
       encriptador2: "text-[#fff] bg-[#D8DFE8]",
+      nooks1: "text-[#000] bg-[#4EA966]",
+      nooks2: "text-[#fff] bg-[#C5FF9D]",
+      nooks3: "text-[#fff] bg-[#FAF4D2]",
+      hs1: "text-[#fff] bg-[#EF9CA6]",
+      hs2: "text-[#fff] bg-[#F4DD51]",
+      hs3: "text-[#000] bg-[#191919]",
     },
     size: {
       xs: "px-2 min-w-8 h-8 text-tiny gap-1 rounded-full",
