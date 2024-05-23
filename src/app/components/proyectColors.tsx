@@ -4,9 +4,9 @@ import { MyButton } from "./MyButton";
 
 export default function ProyectColors({colors}:any){
     return(
-        <>
+        <div className="absolute top-12 left-6">
             <h3>Colores</h3>
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-4 mt-3 items-center">
                 {
                     colors.map((item:any, index:number)=>{
                         return(
@@ -18,6 +18,6 @@ export default function ProyectColors({colors}:any){
                 }
                 <div className={`bg-[#${colors.item}] text-primary`}></div>
             </div>
-        </>
+        </div>
     )
 };
