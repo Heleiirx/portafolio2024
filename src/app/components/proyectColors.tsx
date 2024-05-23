@@ -3,7 +3,6 @@ import {Tooltip, Button} from "@nextui-org/react";
 import { MyButton } from "./MyButton";
 
 export default function ProyectColors({colors}:any){
-    console.log(colors);
     return(
         <>
             <h3>Colores</h3>
