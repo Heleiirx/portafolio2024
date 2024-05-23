@@ -11,10 +11,10 @@ export default function Encriptador(){
     const encriptador= proyects[0];
     const colores:object[] = encriptador.colors;
 
-    return<div className="flex flex-col">
-        <h1>{encriptador.title}</h1>
+    return<div className="flex flex-col min-h-screen pt-14">
+        <h1 className="text-5xl" style={{color:`#${encriptador.primaryColor}`}}>{encriptador.title}</h1>
         <article className="font-mono">{encriptador.description}</article>
-        <ProyectLinks page={encriptador.pageURL} repo={encriptador.repoURL} />
+        <ProyectLinks page={encriptador.pageURL} repo={encriptador.repoURL} bgcolor={encriptador.primaryColor} />
         <ProyectColors colors={colores} />
         <ProyectSkills skills={encriptador.skills} bgcolor={encriptador.primaryColor} />
         {/* <Image src={`${desktopImg}`} ></Image> */}

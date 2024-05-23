@@ -4,15 +4,15 @@ import { FaExternalLinkAlt, FaGithub, FaFigma } from "react-icons/fa";
 export default function ProyectLinks(props:any){
    return(
     <div className="flex gap-3 flex-wrap">
-        <Link href={props.page}>
+        <Link href={props.page} style={{color:`#${props.bgcolor}`}}>
             <FaExternalLinkAlt></FaExternalLinkAlt>
             Página web
         </Link>
-        <Link href={props.repo}>
+        <Link href={props.repo} style={{color:`#${props.bgcolor}`}}>
             <FaGithub></FaGithub>
             Repositorio
         </Link>
-        { !props.figma ? null : ( <Link href={props.figma}>
+        { !props.figma ? null : ( <Link href={props.figma} style={{color:`#${props.bgcolor}`}}>
             <FaFigma></FaFigma>
             Diseño Figma
         </Link> )
