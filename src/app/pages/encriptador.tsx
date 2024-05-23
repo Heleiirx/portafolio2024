@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import {Image} from "@nextui-org/react";
+import React, { useContext } from "react";
+import Image from 'next/image'
 import { proyectsArr } from "./proyects/proyectsContext";
 import ProyectLinks from "../components/proyectLinks";
 import ProyectColors from "../components/proyectColors";
@@ -17,6 +17,6 @@ export default function Encriptador(){
         <ProyectLinks page={encriptador.pageURL} repo={encriptador.repoURL} bgcolor={encriptador.primaryColor} />
         <ProyectColors colors={colores} />
         <ProyectSkills skills={encriptador.skills} bgcolor={encriptador.primaryColor} />
-        {/* <Image src={`${desktopImg}`} ></Image> */}
+        <Image alt="Encriptador Desktop" src={desktopImg} ></Image>
     </div>
 };
