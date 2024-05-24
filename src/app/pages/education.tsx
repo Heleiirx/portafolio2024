@@ -1,4 +1,3 @@
-import Banner from "../components/banner";
 import List from "../components/list/list";
 import {educacion, cursosTitulaciones} from "../components/list/ListContent";
 // import cursosTitulaciones from "../components/list/ListContent";
@@ -6,14 +5,13 @@ import {educacion, cursosTitulaciones} from "../components/list/ListContent";
 export default function Education(){
 
     return (
-    <div className="flex flex-col min-h-screen items-center justify-center relative">
-        <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
-        <div className="w-screen flex flex-col items-center my-12 gap-8">
+    <div className="flex flex-col h-screen items-center justify-center relative lg:h-full lg:mb-12">
+        <div className="w-screen flex flex-col items-center my-12 gap-8 relative lg:h-96 lg:items-start lg:px-24 ">
             <List title='Educación' content={educacion} flexDirection={'col'}/>
             <List title='Cursos y Titulaciones' content={cursosTitulaciones} flexDirection={'col'}/>
-            <div className="felx flex-col items-center w-3/4 gap-6">
+            <div className="felx flex-col items-center w-3/4 gap-6 lg:w-1/2 lg:absolute lg:top-0 lg:right-0">
                 <h1 className="text-2xl text-left">Idiomas</h1>
-                <ul className="flex gap-16">
+                <ul className="flex gap-16 ">
                     <li className="first-line:tracking-widest
                             first-letter:text-3xl first-letter:font-bold
                             first-letter:mr-3 first-letter:float-left first-letter:text-secondary">

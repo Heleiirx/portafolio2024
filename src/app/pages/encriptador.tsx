@@ -12,7 +12,7 @@ export default function Encriptador(){
     const colores:object[] = encriptador.colors;
 
     return(
-    <div className="flex flex-col min-h-screen pt-14">
+    <div className="flex flex-col min-h-screen pt-16">
         <div className="flex flex-col gap-4 items-center">
             <h1 className="text-5xl" style={{color:`#${encriptador.primaryColor}`}}>{encriptador.title}</h1>
             <article className="font-mono w-3/4 text-lg">{encriptador.description}</article>

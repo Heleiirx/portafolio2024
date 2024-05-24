@@ -2,6 +2,7 @@
 import React,{useContext} from "react"
 import Cover from "./pages/cover";
 import AboutMe from "./pages/aboutMe";
+import Banner from "./components/banner";
 import Navegacion from "./components/navbar";
 import Education from "./pages/education";
 import Proyects from "./pages/proyects/proyects";
@@ -15,6 +16,7 @@ export default function Home() {
       <Navegacion/>
       <Cover/>
       <AboutMe/>
+      <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
       <Education/>
       <proyectsArr.Provider value={proyectos}>
         <Proyects/>
