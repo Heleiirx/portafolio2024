@@ -5,7 +5,7 @@ export default function List({content, title, flexDirection}:any){
     return(
         <div className="felx flex-col items-center w-3/4 lg:flex-wrap lg:w-1/2 lg:h-5/6">
             <h1 className="text-2xl text-left">{title}</h1>
-            <ul className={`font-mono flex flex-${flexDirection} gap-3 lg:flex-wrap lg:h-full`}>
+            <ul className={`font-mono flex flex-${flexDirection} gap-3 lg:flex-wrap lg:h-full lg:gap-x-28`}>
                 {content.map((item :any) => {
                     return(
                     <div key={item.id}>
