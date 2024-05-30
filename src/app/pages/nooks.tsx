@@ -1,5 +1,4 @@
 import React, {useContext} from "react";
-import Image from "next/image";
 import { proyectsArr } from "./proyects/proyectsContext";
 import ProyectColors from "../components/proyectColors";
 import ProyectLinks from "../components/proyectLinks";
@@ -14,7 +13,7 @@ export default function Nooks(){
     return(
         <div className="h-screen relative pt-16">
             <div className="relative flex flex-col items-end pr-10">
-                <h1 className="w-1/2 text-5xl lg:text-6xl text-right" style={{color:`#${primaryColor}`}}>Nook's Shop</h1>
+                <h1 className="w-1/2 text-5xl lg:text-6xl text-right" style={{color:`#${primaryColor}`}}>Nooks Shop</h1>
                 <article className="text-right w-3/4">Aplicación web de streaming que reune videos de youtube en una API rest diseñada con Json-Server, permite añadir videos, eliminarlos y editar la información añadida.</article>
                 <ProyectLinks page={nooks.pageURL} repo={nooks.repoURL} bgcolor={primaryColor}  />
             </div>
