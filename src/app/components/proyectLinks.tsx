@@ -3,7 +3,7 @@ import { FaExternalLinkAlt, FaGithub, FaFigma } from "react-icons/fa";
 
 export default function ProyectLinks(props:any){
    return(
-    <div className={`flex flex-wrap justify-${props.justify} w-${props.width} lg:w-1/2 lg:absolute lg:bottom-0 lg:right-12 `}>
+    <div className={`flex flex-wrap ${props.className} `}>
         <Link size="lg" href={props.page} className="lg:text-2xl" style={{color:`#${props.bgcolor}`}}>
             <FaExternalLinkAlt></FaExternalLinkAlt>
             Página web
