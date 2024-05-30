@@ -25,6 +25,6 @@ export default function Encriptador(){
             <ProyectColors colors={colores} primaryColor={encriptador.primaryColor} classNameParent="top-12 left-6 lg:relative lg:top-[8rem] lg:left-14" classNameChild="flex-col mt-3" />
             <ProyectSkills skills={encriptador.skills} bgcolor={primaryColor} className="p-4 -translate-y-9 lg:-translate-y-24 lg:translate-x-10 lg:flex-wrap lg:mt-4 lg:w-1/2"/>
         </div>
-        <Image alt="Encriptador Movile" src={mobileImg} className="hidden lg:w-5/12 lg:absolute lg:bottom-0 lg:right-0"></Image>
+        <Image alt="Encriptador Movile" src={mobileImg} className="hidden lg:w-5/12 lg:absolute lg:bottom-0 lg:right-0 lg:inline"></Image>
     </div>);
 };
