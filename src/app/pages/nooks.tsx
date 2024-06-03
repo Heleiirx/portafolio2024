@@ -10,7 +10,7 @@ import nm3 from '@/img/nooksMob3.png';
 
 export default function Nooks(){
     const proyects = useContext(proyectsArr);
-    const nooks = proyects[0];
+    const nooks = proyects[1];
     const colores:object[] = proyects[1].colors;
     const primaryColor:string = proyects[1].primaryColor;
 
