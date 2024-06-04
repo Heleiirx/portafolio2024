@@ -39,7 +39,7 @@ export const proyectsArr = createContext<proyect[]>([
     },
     {
         title:'Nook\'s Shop',
-        description:'Web Store que usa un servidor hecho con json-server para manipular los productos (CRUD) y validar usuarios',
+        description:'Aplicación web de streaming que reune videos de youtube en una API rest diseñada con Json-Server, permite añadir videos, eliminarlos y editar la información añadida',
         primaryColor:'4EA966',
         skills:['React','JavaScript','JsonServer','Axios','CSS','HTML'],
         colors:[
