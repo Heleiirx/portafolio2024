@@ -56,7 +56,7 @@ export const proyectsArr = createContext<proyect[]>([
     {
         title:'HStube',
         description:'Aplicación de streaming que reune videos en una api rest creada con json-server. Permite eliminar, agregar, editar y redireccionar al video',
-        primaryColor:'ED64A6',
+        primaryColor:'EF9CA6', 
         skills:['React','JavaScript','JsonServer','Axios','CSS'],
         colors:[
             {color:'hs1',
