@@ -13,11 +13,13 @@ export default function HStube(){
     const primaryColor:string = hstube.primaryColor;
 
     return(
-        <div>
-            <h1>HStube</h1>
-            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laboriosam rem in, modi illo incidunt doloribus alias. Ea, nihil molestiae dicta repellat dolorem reiciendis, perspiciatis ipsum exercitationem excepturi odit deserunt?</article>
-            <Image src={hsDesk} alt='Screenshot HStube desktop' />
-            <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} bgcolor={primaryColor} />
+        <div className="" >
+            <div className="flex flex-col px-12 gap-4 z-10">
+                <h1 className='text-5xl lg:text-6xl' style={{color:`#${primaryColor}`}} >{hstube.title}</h1>
+                <article className="font-mono text-lg lg:text-xl">{hstube.description}</article>
+                <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} bgcolor={primaryColor} className='flex-col self-end translate-y-10 gap-6' />
+            </div>
+            <Image src={hsDesk} alt='Screenshot HStube desktop' className="-translate-x-20 z-0 -translate-y-20" />
             <ProyectColors colors={colors} primaryColor={primaryColor} />
             <ProyectSkills skills={hstube.skills} bgcolor={primaryColor} />
         </div>
