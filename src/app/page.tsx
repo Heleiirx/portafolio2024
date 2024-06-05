@@ -7,6 +7,7 @@ import Navegacion from "./components/navbar";
 import Education from "./pages/education";
 import Proyects from "./pages/proyects/proyects";
 import Contacto from "./pages/contacto";
+import Footer from "./components/footer";
 import { proyectsArr } from "./pages/proyects/proyectsContext";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Proyects/>
       </proyectsArr.Provider>
       <Contacto/>
+      <Footer/>
     </main>
   );
 }
