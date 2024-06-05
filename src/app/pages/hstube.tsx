@@ -13,15 +13,17 @@ export default function HStube(){
     const primaryColor:string = hstube.primaryColor;
 
     return(
-        <div className="" >
-            <div className="flex flex-col px-12 gap-4 z-10">
+        <div className="pt-6" >
+            <div className="flex flex-col px-12 gap-5 z-10">
                 <h1 className='text-5xl lg:text-6xl' style={{color:`#${primaryColor}`}} >{hstube.title}</h1>
                 <article className="font-mono text-lg lg:text-xl">{hstube.description}</article>
                 <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} bgcolor={primaryColor} className='flex-col self-end translate-y-10 gap-6' />
             </div>
             <Image src={hsDesk} alt='Screenshot HStube desktop' className="-translate-x-20 z-0 -translate-y-20" />
-            <ProyectColors colors={colors} primaryColor={primaryColor} />
-            <ProyectSkills skills={hstube.skills} bgcolor={primaryColor} />
+            <div className="flex flex-col items-center gap-5 -translate-y-32">
+                <ProyectColors colors={colors} primaryColor={primaryColor} classNameParent="translate-x-20 -translate-y-6 gap-3" classNameChild="" />
+                <ProyectSkills skills={hstube.skills} bgcolor={primaryColor} className="mx-5 gap-5"/>
+            </div>
         </div>
     );
 };
