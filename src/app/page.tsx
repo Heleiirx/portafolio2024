@@ -6,6 +6,7 @@ import Banner from "./components/banner";
 import Navegacion from "./components/navbar";
 import Education from "./pages/education";
 import Proyects from "./pages/proyects/proyects";
+import Contacto from "./pages/contacto";
 import { proyectsArr } from "./pages/proyects/proyectsContext";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <proyectsArr.Provider value={proyectos}>
         <Proyects/>
       </proyectsArr.Provider>
+      <Contacto/>
     </main>
   );
 }
