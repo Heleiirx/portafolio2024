@@ -68,5 +68,6 @@ export const proyectsArr = createContext<proyect[]>([
         ],
         repoURL:'https://github.com/Heleiirx/hstube',
         pageURL:'https://hstube.vercel.app/',
+        figmaURL:'https://www.figma.com/design/USri0Xho4FHysiwpDxKtv0/HStube?node-id=1-89&t=hsDfFKOn47il8raj-1',
     },
 ])
