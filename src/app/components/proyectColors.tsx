@@ -1,7 +1,14 @@
 import {Tooltip} from "@nextui-org/react";
 import { MyButton } from "./MyButton";
 
-export default function ProyectColors({colors, primaryColor, classNameParent, classNameChild}:any){
+interface proyectColorsProps{
+    colors:object[],
+    primaryColor:string,
+    classNameParent:string,
+    classNameChild:string,
+};
+
+export default function ProyectColors({colors, primaryColor, classNameParent, classNameChild}:proyectColorsProps){
     return(
         <div className={`flex flex-col lg:flex lg:items-center lg:gap-6 ${classNameParent}`}>
             <h3 className="text-2xl lg:text-3xl" style={{color:`#${primaryColor}`}}>Colores</h3>

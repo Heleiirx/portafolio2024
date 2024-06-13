@@ -1,6 +1,12 @@
 import IconsGroup from '../iconsGroup'
 
-export default function List({content, title, flexDirection}:any){
+interface listProps{
+    content:object[],
+    title:string,
+    flexDirection:string,
+}
+
+export default function List({content, title, flexDirection}:listProps){
 
     return(
         <div className="felx flex-col items-center w-3/4 lg:flex-wrap lg:w-1/2 lg:h-5/6">

@@ -1,18 +1,26 @@
 import {Link} from "@nextui-org/react";
 import { FaExternalLinkAlt, FaGithub, FaFigma } from "react-icons/fa";
 
-export default function ProyectLinks(props:any){
+interface proyectLinksProps{
+    className:string,
+    bgcolor:string,
+    page:string,
+    repo:string,
+    figma?:string,
+}
+
+export default function ProyectLinks({className, bgcolor, page, repo, figma}:proyectLinksProps){
    return(
-    <div className={`flex flex-wrap ${props.className} `}>
-        <Link size="lg" href={props.page} className="lg:text-2xl" style={{color:`#${props.bgcolor}`}}>
+    <div className={`flex flex-wrap ${className} `}>
+        <Link size="lg" href={page} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
             <FaExternalLinkAlt></FaExternalLinkAlt>
             Página web
         </Link>
-        <Link size="lg" href={props.repo} className="lg:text-2xl" style={{color:`#${props.bgcolor}`}}>
+        <Link size="lg" href={repo} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
             <FaGithub></FaGithub>
             Repositorio
         </Link>
-        { !props.figma ? null : ( <Link size="lg" href={props.figma} className="lg:text-2xl" style={{color:`#${props.bgcolor}`}}>
+        { ! figma ? null : ( <Link size="lg" href={figma} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
             <FaFigma></FaFigma>
             Diseño Figma
         </Link> )

@@ -5,7 +5,7 @@ import {educacion, cursosTitulaciones} from "../components/list/ListContent";
 export default function Education(){
 
     return (
-    <div className="flex flex-col h-screen items-center justify-center relative lg:h-full lg:mb-12">
+    <div className="flex flex-col h-fit items-center justify-center relative lg:h-full lg:mb-12">
         <div className="w-screen flex flex-col items-center my-12 gap-8 relative lg:h-96 lg:items-start lg:px-24 ">
             <List title='Educación' content={educacion} flexDirection={'col'}/>
             <List title='Cursos y Titulaciones' content={cursosTitulaciones} flexDirection={'col'}/>
