@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar, FaRegStar , FaLinkedin, FaGithub   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import {Link} from "@nextui-org/react";
-import Bokuto from '@/img/Bokuto.png'
+import Yo from '@/img/Yo.svg'
 import Image from 'next/image'
 
 
@@ -22,8 +22,8 @@ export default function AboutMe(){
                 </div>
             </div>
             <div className="flex flex-col w-11/12 items-center relative
-            lg:w-1/2">
-                <div className="w-3/4 relative 
+            lg:w-1/2">  
+                <div className="w-3/4 relative lg:mr-6
                 before:content-['☆'] before:text-9xl before:absolute before:rotate-12 before:top-0 before:right-2/3
                 after:content-['☆'] after:text-9xl after:absolute after:rotate-120 after:rotate-45 after:bottom-0 after:left-2/3
                 lg:before:top-12 lg:before:right-3/4 lg:after:bottom-1 lg:after:left-3/4
@@ -34,9 +34,9 @@ export default function AboutMe(){
                         FrontEnd
                     </span>
                     <Image
-                    src={Bokuto}
+                    src={ Yo}
                     alt="Picture of the author "
-                    className="w-fill"
+                    className="w-fill lg:w-3/4 lg:ml-12"
                     priority
                     />
                     <span className="w-1/2 rounded-full h-16 bg-primary text-2xl p-2 text-center
