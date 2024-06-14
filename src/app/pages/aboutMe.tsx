@@ -10,11 +10,14 @@ export default function AboutMe(){
     return(
         <div className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
         lg:justify-between lg:flex-row lg:gap-8">
-            <div className="flex flex-col w-11/12 h-full gap-y-1.5 justify-between items-center
+            <div className="flex flex-col w-11/12 h-full gap-y-2 justify-between items-center
             lg:w-1/2">
-                <h1 className="w-3/4 text-6xl">HOLA,</h1>
-                <h2 className="w-3/4 text-6xl">Soy Itzel!</h2>
-                <p className="font-mono w-3/4 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c</p>
+                <h1 className="w-3/4 text-6xl lg:w-5/6">HOLA,</h1>
+                <h2 className="w-3/4 text-6xl lg:w-5/6">Soy Itzel!</h2>
+                <p className="font-mono w-3/4 text-lg lg:w-5/6"> 
+                Desarrolladora jr con experiencia en interfaces web, bases de datos y la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos.
+                {/* Desarrolladora jr con experiencia en React, JavaScript, CSS, TypeScript y bases de datos, así como la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos. */}
+                </p>
                 <div className="flex w-1/2 justify-around">
                     <Link size="lg" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-9" />}></Link>
                     <Link size="lg" isExternal showAnchorIcon href="https://github.com/Heleiirx" anchorIcon={<FaGithub className="size-9" />}></Link>
