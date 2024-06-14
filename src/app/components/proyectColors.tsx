@@ -4,8 +4,8 @@ import { MyButton } from "./MyButton";
 interface proyectColorsProps{
     colors:object[],
     primaryColor:string,
-    classNameParent:string,
-    classNameChild:string,
+    classNameParent?:string,
+    classNameChild?:string,
 };
 
 export default function ProyectColors({colors, primaryColor, classNameParent, classNameChild}:proyectColorsProps){
