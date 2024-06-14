@@ -25,12 +25,11 @@ export default function Navegacion() {
       }}
     >
       <NavbarBrand>
-        {/* <AcmeLogo /> */}
         <p className={`font-bold text-inherit tracking-wider text-primary text-2xl`}>ITZEL</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4 font-mono" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#about-me">
             Sobre mi
           </Link>
         </NavbarItem>
@@ -50,16 +49,6 @@ export default function Navegacion() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      {/* <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
     </Navbar>
     </div>
   );

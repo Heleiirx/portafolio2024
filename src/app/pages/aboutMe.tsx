@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 export default function AboutMe(){
     return(
-        <div className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
+        <div id="about-me" className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
         lg:justify-between lg:flex-row lg:gap-8">
             <div className="flex flex-col w-11/12 h-full gap-y-2 justify-between items-center
             lg:w-1/2">
