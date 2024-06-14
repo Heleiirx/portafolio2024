@@ -22,7 +22,7 @@ export default function Encriptador(){
         </div>
         <div className="flex flex-col mt-5 relative lg:-translate-y-12 lg:mt-0">
             <Image alt="Encriptador Desktop" src={desktopImg} className="translate-x-1/4 h-96 lg:h-auto lg:w-1/2 lg:translate-x-2" ></Image>
-            <ProyectColors colors={colores} primaryColor={encriptador.primaryColor} classNameParent="absolute top-12 left-6 lg:relative lg:top-[8rem] lg:left-14" classNameChild="flex-col mt-3" />
+            <ProyectColors colors={colores} primaryColor={encriptador.primaryColor} classNameParent="absolute top-12 left-6 lg:relative lg:top-[12rem] lg:left-14 lg:w-1/4" classNameChild="flex-col mt-3" />
             <ProyectSkills skills={encriptador.skills} bgcolor={primaryColor} className="p-4 -translate-y-9 lg:-translate-y-24 lg:translate-x-10 lg:flex-wrap lg:mt-4 lg:w-1/2"/>
         </div>
         <Image alt="Encriptador Movile" src={mobileImg} className="hidden lg:w-5/12 lg:absolute lg:bottom-0 lg:right-0 lg:inline"></Image>

@@ -14,7 +14,7 @@ export default function HStube(){
 
     return(
         <div className="pt-6 relative h-screen lg:flex" >
-            <div className="flex flex-col px-12 gap-5 lg:basis-2/3 lg:gap-3 lg:pb-4 lg:justify-evenly">
+            <div className="flex flex-col px-12 gap-5 lg:basis-2/3 lg:gap-3 lg:pb-4">
                 <h1 className='text-5xl lg:text-6xl' style={{color:`#${primaryColor}`}} >{hstube.title}</h1>
                 <article className="font-mono text-lg lg:text-xl">{hstube.description}</article>
                 <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} figma={hstube.figmaURL} bgcolor={primaryColor} className='flex-col self-end translate-y-10 gap-6 lg:flex-row lg:self-start lg:translate-y-0 lg:justify-evenly lg:w-full' />
