@@ -1,12 +1,18 @@
+import React, { useRef } from "react";
+import { navbarScroll } from "@/app/utils/AnimationUtils";
 import Banner from "../../components/banner";
 import Encriptador from "../encriptador";
 import Nooks from "../nooks";
 import HStube from "../hstube";
 
-export default function Proyects(){
+export default function Proyects( { id, setActiveSection }: any ){
+    const ref =useRef(null);
+
+    //Funcion que activa el cambio de elemento activo en abrra de navegación
+    navbarScroll({id, setActiveSection}, ref);
 
     return (
-        <div className="flex flex-col h-fit items-center justify-center relative">
+        <div ref={ref} id={id} className="flex flex-col h-fit items-center justify-center relative">
             <Banner bannerText=' ☆ MIS PROYECTOS' background='bg-primary'></Banner>
             <Encriptador/>
             <Nooks/>

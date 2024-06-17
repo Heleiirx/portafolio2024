@@ -1,53 +1,62 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import { montserrat } from "../ui/fonts";
 
-export default function Navegacion() {
+export default function Navegacion( activeSection:any ) {
+
+  interface link{
+    key:number,
+    title:string,
+    href:string,
+  }
+
+  const sectionsArr:link[] =[
+    {
+      key: 1,
+      title: 'Sobre Mi',
+      href: 'about-me',
+    },
+    {
+      key: 2,
+      title: 'Formación',
+      href: 'education',
+    },
+    {
+      key: 3,
+      title: 'Proyectos',
+      href: 'proyects',
+    },
+    {
+      key: 4,
+      title: 'Contacto',
+      href: 'contact',
+    },
+  ]
+
   return (
     <div className={`${montserrat.variable} bg-background fixed w-full z-50`}>
-      <Navbar
-      classNames={
-        {
-        item: [
-          "flex",
-          "relative",
-          "h-full",
-          "items-center",
-          "data-[active=true]:after:content-['']",
-          "data-[active=true]:after:absolute",
-          "data-[active=true]:after:bottom-0",
-          "data-[active=true]:after:left-0",
-          "data-[active=true]:after:right-0",
-          "data-[active=true]:after:h-[2px]",
-          "data-[active=true]:after:rounded-[2px]",
-          "data-[active=true]:after:bg-primary",
-        ],
-      }}
-    >
+      <Navbar >
       <NavbarBrand>
-        <p className={`font-bold text-inherit tracking-wider text-primary text-2xl`}>ITZEL</p>
+        <Link href={'/'} className={`font-bold text-inherit tracking-wider text-primary text-2xl`}>ITZEL</Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4 font-mono" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#about-me">
-            Sobre mi
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Formación
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Proyectos
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Contacto
-          </Link>
-        </NavbarItem>
+
+      {
+        sectionsArr.map((section:link) => {
+          return (
+            <motion.div key={section.href} 
+            initial={{ color: '#52575a' }}
+            animate={{ color: (activeSection.activeSection) == (section.href) ? '#ed64a6' : '#52575a' }} >
+              <Link href={`#${section.href}`} className="font-bold">
+                {section.title}
+              </Link>
+            </motion.div>
+          )
+        } )
+      }
+
       </NavbarContent>
     </Navbar>
     </div>

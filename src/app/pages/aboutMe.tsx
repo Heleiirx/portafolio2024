@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaStar, FaRegStar , FaLinkedin, FaGithub   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import {Link} from "@nextui-org/react";
+import {Link} from "@nextui-org/link";
 import Yo from '@/img/Yo.svg'
-import Image from 'next/image'
+import Image from 'next/image';
+import { navbarScroll } from "../utils/AnimationUtils";
 
 
-export default function AboutMe(){
+
+export default function AboutMe( { id, setActiveSection  }:any ){
+    const ref =useRef(null);
+
+    //Funcion que activa el cambio de elemento activo en abrra de navegación
+    navbarScroll({id, setActiveSection}, ref);
+    
+    const email = "itzelvargas2002@gmail.com";
+    const subject = "Me gustaría saber más sobre tu trabajo.";
+    const body = "";
+    const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+
     return(
-        <div id="about-me" className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
+        <div ref={ref} id={id} className="flex flex-col-reverse min-h-screen items-center gap-0 justify-evenly 
         lg:justify-between lg:flex-row lg:gap-8">
             <div className="flex flex-col w-11/12 h-full gap-y-2 justify-between items-center
             lg:w-1/2">
@@ -21,7 +34,7 @@ export default function AboutMe(){
                 <div className="flex w-1/2 justify-around">
                     <Link size="lg" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-9" />}></Link>
                     <Link size="lg" isExternal showAnchorIcon href="https://github.com/Heleiirx" anchorIcon={<FaGithub className="size-9" />}></Link>
-                    <Link size="lg" showAnchorIcon href="#" anchorIcon={<MdEmail className="size-9" />}></Link>
+                    <Link size="lg" isExternal showAnchorIcon href={gmailHref} anchorIcon={<MdEmail className="size-9" />}></Link>
                 </div>
             </div>
             <div className="flex flex-col w-11/12 items-center relative

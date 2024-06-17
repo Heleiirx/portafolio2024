@@ -1,5 +1,5 @@
 'use client';
-import React,{useContext} from "react"
+import React,{useContext, useState} from "react"
 import Cover from "./pages/cover";
 import AboutMe from "./pages/aboutMe";
 import Banner from "./components/banner";
@@ -11,19 +11,22 @@ import Footer from "./components/footer";
 import { proyectsArr } from "./pages/proyects/proyectsContext";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState('');
+
   const proyectos = useContext(proyectsArr);
 
+ 
   return (
     <main className="overflow-hidden">
-      <Navegacion/>
+      <Navegacion activeSection={activeSection} />
       <Cover/>
-      <AboutMe/>
+      <AboutMe id='about-me' setActiveSection={setActiveSection} />
       <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
-      <Education/>
+      <Education id='education' setActiveSection={setActiveSection} />
       <proyectsArr.Provider value={proyectos}>
-        <Proyects/>
+        <Proyects id='proyects' setActiveSection={setActiveSection} />
       </proyectsArr.Provider>
-      <Contacto/>
+      <Contacto id='contact' setActiveSection={setActiveSection} />
       <Footer/>
     </main>
   );
