@@ -35,7 +35,7 @@ export default function Contacto( { id, setActiveSection }:any ){
 
     return(
         <div ref={ref} id={id} className="relative h-screen  pt-60 lg:pt-40">
-            <div ref={scope} className='flex justify-center items-start'>
+            <div ref={scope} className='flex justify-center items-start h-fit'>
                 <div>
                     <IoMdStar className='absolute text-2xl left-12 top-52 z-10 text-4xl star lg:left-1/3 lg:top-1/4'/>
                     <IoMdStar className='absolute text-xl left-14 top-64 z-10 text-4xl lg:left-1/3 lg:top-1/3'/>

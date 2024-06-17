@@ -28,7 +28,7 @@ export default function AboutMe( { id, setActiveSection  }:any ){
                 <h1 className="w-3/4 text-6xl lg:w-5/6">HOLA,</h1>
                 <h2 className="w-3/4 text-6xl lg:w-5/6">Soy Itzel!</h2>
                 <p className="font-mono w-3/4 text-lg lg:w-5/6"> 
-                Desarrolladora jr con experiencia en interfaces web, bases de datos y la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos.
+                Desarrolladora jr con experiencia en interfaces web, bases de datos y configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una buena gestion de tiempos.
                 {/* Desarrolladora jr con experiencia en React, JavaScript, CSS, TypeScript y bases de datos, así como la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos. */}
                 </p>
                 <div className="flex w-1/2 justify-around">

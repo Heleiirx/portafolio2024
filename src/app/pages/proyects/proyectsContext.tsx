@@ -25,7 +25,7 @@ interface proyect{
 export const proyectsArr = createContext<proyect[]>([
     {
         title:'Encriptador',
-        description:'Aplicacion que toma las vocales del texto ingresado y las sustituye por un texto determinado o viceversa.',
+        description:'Aplicacion que toma las vocales del texto ingresado y las sustituye por un texto determinado, tambien puede desencriptar texto encriptado en la misma aplicación.',
         primaryColor:'0A3871',
         skills:['HTML','CSS','JavaScript','Git','Github'],
         colors:[
