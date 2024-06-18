@@ -7,7 +7,7 @@ import Image from "next/image";
 import nm1 from '@/img/nooksMob1.png';
 import nm2 from '@/img/nooksMob2.png';
 import nm3 from '@/img/nooksMob3.png';
-import Carousel from "../../components/InfiniteCarousel";
+import Carousel from "@/app/components/InfiniteCarousel";
 import { NooksArr } from "@/app/contexts/carouselArr";
 
 export default function Nooks(){
