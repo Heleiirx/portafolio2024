@@ -13,11 +13,6 @@ export default function Contacto( { id, setActiveSection }:any ){
     //Funcion que activa el cambio de elemento activo en abrra de navegación
     navbarScroll({id, setActiveSection}, ref);
 
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end"]
-    })
-
     const [scope, animate] = useAnimate();
     const isInView = useInView(ref);
     
