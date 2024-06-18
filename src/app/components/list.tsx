@@ -1,4 +1,4 @@
-import IconsGroup from '../iconsGroup'
+import IconsGroup from './iconsGroup'
 
 interface listProps{
     content:object[],

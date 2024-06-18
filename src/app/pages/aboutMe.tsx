@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { FaStar, FaRegStar , FaLinkedin, FaGithub   } from "react-icons/fa";
+import React, { useRef } from "react";
+import { FaLinkedin, FaGithub   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import {Link} from "@nextui-org/link";
 import Yo from '@/img/Yo.svg'

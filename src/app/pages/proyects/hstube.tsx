@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import Image from "next/image";
-import ProyectColors from "../components/proyectColors";
-import ProyectLinks from "../components/proyectLinks";
-import ProyectSkills from "../components/proyectSkills";
-import { proyectsArr } from "./proyects/proyectsContext";
+import ProyectColors from "../../components/proyectColors";
+import ProyectLinks from "../../components/proyectLinks";
+import ProyectSkills from "../../components/proyectSkills";
+import { proyectsArr } from "../../contexts/proyectsContext";
 import hsDesk from '@/img/hstubeDesktop.png';
 
 export default function HStube(){

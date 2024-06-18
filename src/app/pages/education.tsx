@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import List from "../components/list/list";
-import {educacion, cursosTitulaciones} from "../components/list/ListContent";
+import List from "@/app/components/list";
+import {educacion, cursosTitulaciones} from "../contexts/ListContent";
 import { NavbarScroll } from "../utils/AnimationUtils";
 
 export default function Education( { id, setActiveSection  }:any ){

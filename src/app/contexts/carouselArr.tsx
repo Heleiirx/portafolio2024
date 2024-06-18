@@ -15,9 +15,9 @@ export const NooksArr:object[] =[
     nDskt3,
     nDskt4,
     nDskt5,
-    nDskt6,
-    nDskt7,
-    nDskt8,
-    nDskt9,
-    nDskt10
+    // nDskt6,
+    // nDskt7,
+    // nDskt8,
+    // nDskt9,
+    // nDskt10
 ]

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import Image from 'next/image'
-import { proyectsArr } from "./proyects/proyectsContext";
-import ProyectLinks from "../components/proyectLinks";
-import ProyectColors from "../components/proyectColors";
-import ProyectSkills from "../components/proyectSkills";
+import { proyectsArr } from "../../contexts/proyectsContext";
+import ProyectLinks from "../../components/proyectLinks";
+import ProyectColors from "../../components/proyectColors";
+import ProyectSkills from "../../components/proyectSkills";
 import desktopImg from '@/img/encriptadorDesktop.png';
 import mobileImg from '@/img/encriptadorMovile.png'
 

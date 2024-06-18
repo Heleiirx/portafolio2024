@@ -1,10 +1,9 @@
-import { FaGithub, FaGitAlt , FaFish, FaHtml5, FaReact, FaCss3Alt} from "react-icons/fa";
+import { FaGithub, FaGitAlt , FaHtml5, FaReact, FaCss3Alt} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { GrMysql, GrOracle  } from "react-icons/gr";
 import { PiFileSqlDuotone } from "react-icons/pi";
-import { GiUfo } from "react-icons/gi";
-import {Agile, Comunicacion, DesarrolloPersonal, GestionTiempo, Oratoria, TeamWork} from "../icons";
+import {Agile, Comunicacion, DesarrolloPersonal, GestionTiempo, Oratoria, TeamWork} from "../components/icons";
 
 type Icons = {
     id:number,

@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { NavbarScroll } from "@/app/utils/AnimationUtils";
-import Banner from "../../components/banner";
-import Encriptador from "../encriptador";
-import Nooks from "../nooks";
-import HStube from "../hstube";
+import Banner from "@/app/components/banner";
+import Encriptador from "./proyects/encriptador";
+import Nooks from "./proyects/nooks";
+import HStube from "./proyects/hstube";
 
 export default function Proyects( { id, setActiveSection }: any ){
     const ref =useRef(null);
