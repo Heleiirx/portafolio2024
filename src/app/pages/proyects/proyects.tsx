@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { navbarScroll } from "@/app/utils/AnimationUtils";
+import { NavbarScroll } from "@/app/utils/AnimationUtils";
 import Banner from "../../components/banner";
 import Encriptador from "../encriptador";
 import Nooks from "../nooks";
@@ -9,7 +9,7 @@ export default function Proyects( { id, setActiveSection }: any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    navbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection}, ref);
 
     return (
         <div ref={ref} id={id} className="flex flex-col h-fit items-center justify-center relative">

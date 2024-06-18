@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 
-export function navbarScroll( {id, setActiveSection} : any, ref:any ){
+export function NavbarScroll( {id, setActiveSection} : any, ref:any ){
 
     return useEffect(() => {
             const observer = new IntersectionObserver(

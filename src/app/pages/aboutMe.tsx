@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import {Link} from "@nextui-org/link";
 import Yo from '@/img/Yo.svg'
 import Image from 'next/image';
-import { navbarScroll } from "../utils/AnimationUtils";
+import { NavbarScroll } from "../utils/AnimationUtils";
 
 
 
@@ -12,7 +12,7 @@ export default function AboutMe( { id, setActiveSection  }:any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    navbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection}, ref);
     
     const email = "itzelvargas2002@gmail.com";
     const subject = "Me gustaría saber más sobre tu trabajo.";

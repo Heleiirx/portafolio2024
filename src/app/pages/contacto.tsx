@@ -4,17 +4,17 @@ import gracias2 from '@/img/GRACIAS 2.svg';
 import Image from 'next/image';
 import { useAnimate, useInView, useScroll } from "framer-motion";
 import { IoMdStarOutline, IoMdStar  } from "react-icons/io";
-import { navbarScroll } from '../utils/AnimationUtils';
+import { NavbarScroll } from '../utils/AnimationUtils';
 
 
 export default function Contacto( { id, setActiveSection }:any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    navbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection}, ref);
 
     const [scope, animate] = useAnimate();
-    const isInView = useInView(ref);
+    const isInView = useInView(scope);
     
     useEffect(() => {
        if (isInView) {

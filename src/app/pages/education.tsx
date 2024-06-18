@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import List from "../components/list/list";
 import {educacion, cursosTitulaciones} from "../components/list/ListContent";
-import { navbarScroll } from "../utils/AnimationUtils";
+import { NavbarScroll } from "../utils/AnimationUtils";
 
 export default function Education( { id, setActiveSection  }:any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    navbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection}, ref);
 
     return (
     <div ref={ref} id={id} className="flex flex-col h-fit items-center justify-center relative lg:h-full lg:mb-12">
