@@ -8,16 +8,25 @@ import nDskt7 from '@/img/banner_nooks/nooksDesk7.png';
 import nDskt8 from '@/img/banner_nooks/nooksDesk8.png';
 import nDskt9 from '@/img/banner_nooks/nooksDesk9.png';
 import nDskt10 from '@/img/banner_nooks/nooksDesk10.png';
+import { StaticImageData } from 'next/image';
 
-export const NooksArr:object[] =[
-    nDskt1,
-    nDskt2,
-    nDskt3,
-    nDskt4,
-    nDskt5,
-    // nDskt6,
-    // nDskt7,
-    // nDskt8,
-    // nDskt9,
-    // nDskt10
+export interface Slide {
+    img: StaticImageData; 
+}
+
+// --------------------------------------------------------------------------------------
+// -----------------------  Arrays a renderizar para cada carousel ----------------------
+// --------------------------------------------------------------------------------------
+
+export const NooksArr:Slide[] =[
+   { img : nDskt1, },
+   { img : nDskt2, },
+   { img : nDskt3, },
+   { img : nDskt4, },
+   { img : nDskt5, },
+   { img : nDskt6, },
+   { img : nDskt7, },
+   { img : nDskt8, },
+   { img : nDskt9, },
+   { img : nDskt10 },
 ]
