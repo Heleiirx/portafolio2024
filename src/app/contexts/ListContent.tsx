@@ -32,6 +32,20 @@ const educacion: Item[] = [
         icon: <Oratoria />,
         text:'Oratoria',},
     ]},
+    {id:2,
+        title: '2024-Actualidad',
+        subtitle:'Ingeniería en Desarrollo de Software, UVEG',
+        iconos:[
+            {id:1.1,
+            icon: <TeamWork/>,
+            text:'Trabajo En Equipo'},
+            {id:1.2,
+            icon: <Comunicacion/>,
+            text:'Comunicación Asertiva',},
+            {id:1.3,
+            icon: <Oratoria />,
+            text:'Oratoria',},
+    ]},
 ];
 const cursosTitulaciones: Item[] = [
     {id:2,
