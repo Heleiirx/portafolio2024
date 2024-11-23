@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import List from "@/app/components/list";
 import {educacion, cursosTitulaciones} from "../contexts/ListContent";
 import { NavbarScroll } from "../utils/AnimationUtils";
+import { PageProps } from "../utils/types";
 
-export default function Education( { id, setActiveSection  }:any ){
+export default function Education( { id, setActiveSection  }:PageProps ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación

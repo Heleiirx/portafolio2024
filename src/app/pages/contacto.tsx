@@ -5,9 +5,10 @@ import Image from 'next/image';
 import { useAnimate, useInView, useScroll } from "framer-motion";
 import { IoMdStarOutline, IoMdStar  } from "react-icons/io";
 import { NavbarScroll } from '../utils/AnimationUtils';
+import { PageProps } from '../utils/types';
 
 
-export default function Contacto( { id, setActiveSection }:any ){
+export default function Contacto( { id, setActiveSection }:PageProps ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en barra de navegación

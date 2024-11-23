@@ -4,8 +4,9 @@ import Banner from "@/app/components/banner";
 import Encriptador from "./proyects/encriptador";
 import Nooks from "./proyects/nooks";
 import HStube from "./proyects/hstube";
+import { PageProps } from "../utils/types";
 
-export default function Proyects( { id, setActiveSection }: any ){
+export default function Proyects( { id, setActiveSection }: PageProps ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
