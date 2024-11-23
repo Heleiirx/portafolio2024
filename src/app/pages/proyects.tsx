@@ -9,7 +9,7 @@ export default function Proyects( { id, setActiveSection }: any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    NavbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection, ref});
 
     return (
         <div ref={ref} id={id} className="flex flex-col h-fit items-center justify-center relative">

@@ -12,7 +12,7 @@ export default function AboutMe( { id, setActiveSection  }:any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
-    NavbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection, ref});
     
     const email = "itzelvargas2002@gmail.com";
     const subject = "Me gustaría saber más sobre tu trabajo.";
