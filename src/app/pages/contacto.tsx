@@ -11,7 +11,7 @@ export default function Contacto( { id, setActiveSection }:any ){
     const ref =useRef(null);
 
     //Funcion que activa el cambio de elemento activo en barra de navegación
-    NavbarScroll({id, setActiveSection}, ref);
+    NavbarScroll({id, setActiveSection, ref});
 
     const [scope, animate] = useAnimate();
     const isInView = useInView(scope);
