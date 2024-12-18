@@ -5,13 +5,14 @@ import Image from 'next/image';
 import { useAnimate, useInView, useScroll } from "framer-motion";
 import { IoMdStarOutline, IoMdStar  } from "react-icons/io";
 import { NavbarScroll } from '../utils/AnimationUtils';
+import { PageProps } from '../utils/types';
 
 
-export default function Contacto( { id, setActiveSection }:any ){
-    const ref =useRef(null);
+export default function Contacto( { id, setActiveSection }:PageProps ){
+    const ref =useRef<HTMLDivElement | null>(null);
 
-    //Funcion que activa el cambio de elemento activo en barra de navegación
-    NavbarScroll({id, setActiveSection}, ref);
+    //Función que cambia el elemento activo en la barra de navegacion
+    NavbarScroll({id, setActiveSection, ref});
 
     const [scope, animate] = useAnimate();
     const isInView = useInView(scope);
@@ -26,7 +27,7 @@ export default function Contacto( { id, setActiveSection }:any ){
         animate('#gracias2', { y:0 });
         animate('div svg', { rotateZ:0, scale:[ 1] });
        }
-    }, [isInView])
+    }, [isInView, animate])
 
     return(
         <div ref={ref} id={id} className="relative h-screen  pt-60 lg:pt-40">

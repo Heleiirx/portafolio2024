@@ -11,9 +11,9 @@ interface listProps{
 export default function List({content, title, flexDirection, fatherClass, childClass}:listProps){
 
     return(
-        <div className={`flex flex-row items-center lg:flex-wrap ${fatherClass} lg:w-1/2 lg:h-5/6`}>
-            <h1 className="text-2xl text-left">{title}</h1>
-            <ul className={`font-mono flex flex-${flexDirection} gap-3 ${childClass} lg:h-full lg:gap-x-28`}>
+        <div className={`flex flex-col items-center lg:items-center ${fatherClass} lg:w-full`}>
+            <h1 className="text-2xl text-left self-start ps-20">{title}</h1>
+            <ul className={`font-mono flex flex-${flexDirection} gap-3 ${childClass} `}>
                 {content.map((item :any) => {
                     return(
                     <div key={item.id}>

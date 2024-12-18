@@ -17,7 +17,8 @@ const config: Config = {
           },
       },
       animation: {
-        scrollW: 'scrollW 25s linear infinite'
+        scrollW: 'scrollW 25s linear infinite',
+        tiltInB: 'tilt-inB 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940)'
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
