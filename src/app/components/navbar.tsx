@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { montserrat } from "../ui/fonts";
+import { TbWorld } from "react-icons/tb";
 
 export default function Navegacion( activeSection:any ) {
 
@@ -10,6 +12,11 @@ export default function Navegacion( activeSection:any ) {
     key:number,
     title:string,
     href:string,
+  }
+
+  interface idiom{
+    key:string,
+    label: string,
   }
 
   const sectionsArr:link[] =[
@@ -35,6 +42,17 @@ export default function Navegacion( activeSection:any ) {
     },
   ]
 
+  const idioms: idiom[]=[
+    {
+      key:'default',
+      label:'Español'
+    },
+    {
+      key:'k2',
+      label:'English'
+    }
+  ]
+
   return (
     <div className={`${montserrat.variable} bg-background fixed w-full z-50`}>
       <Navbar >
@@ -53,11 +71,29 @@ export default function Navegacion( activeSection:any ) {
                 {section.title}
               </Link>
             </motion.div>
+
           )
         } )
       }
 
       </NavbarContent>
+      <Dropdown>
+        <DropdownTrigger>
+        <Button isIconOnly variant="light" aria-label="Select language">
+          <TbWorld />
+        </Button>
+        </DropdownTrigger>
+        <DropdownMenu aria-label="Dynamic Actions" items={idioms} selectedKeys={["default"]}>
+        {(idiom) => (
+          <DropdownItem
+            key={idiom.key}
+            color={"default"}
+          >
+            {idiom.label}
+          </DropdownItem>
+        )}
+      </DropdownMenu>
+      </Dropdown>
     </Navbar>
     </div>
   );
