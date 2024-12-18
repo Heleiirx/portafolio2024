@@ -23,6 +23,7 @@ export default function Home() {
       <AboutMe id='about-me' setActiveSection={setActiveSection} />
       <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
       <Education id='education' setActiveSection={setActiveSection} />
+      <Banner bannerText=' ☆ MIS PROYECTOS' background='bg-primary'></Banner>
       <proyectsArr.Provider value={proyectos}>
         <Proyects id='proyects' setActiveSection={setActiveSection} />
       </proyectsArr.Provider>
