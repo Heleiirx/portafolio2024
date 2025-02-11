@@ -77,7 +77,7 @@ export default function Navegacion( activeSection:any ) {
       }
 
       </NavbarContent>
-      <Dropdown>
+      {/* <Dropdown>
         <DropdownTrigger>
         <Button isIconOnly variant="light" aria-label="Select language">
           <TbWorld />
@@ -93,7 +93,7 @@ export default function Navegacion( activeSection:any ) {
           </DropdownItem>
         )}
       </DropdownMenu>
-      </Dropdown>
+      </Dropdown> */}
     </Navbar>
     </div>
   );
