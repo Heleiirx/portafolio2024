@@ -3,6 +3,7 @@ import List from "@/app/components/list";
 import {educacion, cursosTitulaciones, liderazgoYactividades} from "../contexts/ListContent";
 import { NavbarScroll } from "../utils/AnimationUtils";
 import { PageProps } from "../utils/types";
+import SkillsSpiderChart from '../components/SkillsSpiderChart';
 
 export default function Education( { id, setActiveSection  }:PageProps ){
     const ref =useRef(null);
@@ -71,7 +72,7 @@ export default function Education( { id, setActiveSection  }:PageProps ){
                     
                     {/* Columna derecha - Espacio libre para otros componentes */}
                     <div className="space-y-12">
-                        {/* Aquí irán los componentes de Skills, Herramientas, Idiomas, etc. */}
+                        <SkillsSpiderChart />
                     </div>
                 </div>
             </div>
