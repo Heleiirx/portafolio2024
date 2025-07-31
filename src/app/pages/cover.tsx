@@ -1,6 +1,6 @@
 export default function Cover(){
     return (
-    <div className="flex flex-col h-screen items-center justify-center bg-primary relative">
+    <div className="flex flex-col h-screen items-center justify-center bg-primary relative font-mono font-black">
       <div className="w-3/4 relative lg:w-1/2 lg:flex lg:justify-center">
         <h1 className="
         text-8xl text-center text-secondary
