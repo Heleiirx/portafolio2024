@@ -9,22 +9,22 @@ interface listProps{
 export default function List({content, title, flexDirection, fatherClass, childClass}:listProps){
 
     return(
-        <div className={`flex flex-col items-center lg:items-center ${fatherClass} lg:w-full`}>
-            <h1 className="text-2xl text-left self-start ps-20 font-mono">{title}</h1>
-            <ul className={`font-mono flex flex-${flexDirection} gap-3 ${childClass} `}>
+        <div className={`flex flex-col ${fatherClass}`}>
+            <h1 className="text-2xl lg:text-3xl mb-2 uppercase tracking-wider">{title}</h1>
+            <div className={`flex flex-${flexDirection} gap-2 ${childClass}`}>
                 {content.map((item :any) => {
                     return(
-                    <div key={item.id}>
-                        <li className="font-mono list-none first-line:tracking-widest
-                        first-letter:text-3xl first-letter:font-bold
-                        first-letter:mr-3 first-letter:float-left first-letter:text-secondary">☆{item.title}</li>
-                        <li className="font-bold" >{item.subtitle}</li>
-                        <li className="italic">{item.institution}</li>
-                        
-                    </div> 
+                        <div key={item.id} className="flex flex-col">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="text-purple-500 text-2xl">★</span>
+                                <span className="text-sm font-mono">{item.title}</span>
+                            </div>
+                            <h3 className="font-bold text-black text-base leading-tight mb-1">{item.subtitle}</h3>
+                            <p className="italic text-sm font-mono">{item.institution}</p>
+                        </div> 
                     )}
                 )}
-            </ul>
+            </div>
         </div>
     );
 }
