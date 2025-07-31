@@ -8,6 +8,7 @@ import Education from "./pages/education";
 import Proyects from "./pages/proyects";
 import Contacto from "./pages/contacto";
 import Footer from "./components/footer";
+
 import { proyectsArr } from "./contexts/proyectsContext";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Navegacion activeSection={activeSection} />
       <Cover/>
       <AboutMe id='about-me' setActiveSection={setActiveSection} />
+      
       <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
       <Education id='education' setActiveSection={setActiveSection} />
       <Banner bannerText=' ☆ MIS PROYECTOS' background='bg-primary'></Banner>
