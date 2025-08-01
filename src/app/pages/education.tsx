@@ -4,6 +4,10 @@ import {educacion, cursosTitulaciones, liderazgoYactividades} from "../contexts/
 import { NavbarScroll } from "../utils/AnimationUtils";
 import { PageProps } from "../utils/types";
 import SkillsSpiderChart from '../components/SkillsSpiderChart';
+import Tools from "../components/Tools";
+import Languages from "../components/Languages";
+import { toolsData } from "../contexts/toolsData";
+import { languagesData } from "../contexts/languagesData";
 
 export default function Education( { id, setActiveSection  }:PageProps ){
     const ref =useRef(null);
@@ -73,6 +77,10 @@ export default function Education( { id, setActiveSection  }:PageProps ){
                     {/* Columna derecha - Espacio libre para otros componentes */}
                     <div className="space-y-12">
                         <SkillsSpiderChart />
+                        <div className="flex gap-24">
+                            <Tools tools={toolsData} />
+                            <Languages languages={languagesData} />
+                        </div>
                     </div>
                 </div>
             </div>
