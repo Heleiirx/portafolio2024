@@ -3,7 +3,7 @@ import React from 'react';
 interface Tool {
   id: number;
   name: string;
-  icon: string;
+  icon: string | React.ReactNode; // Puede ser un string o un componente de icono
   color: string;
 }
 
@@ -26,7 +26,7 @@ const Tools: React.FC<ToolsProps> = ({ tools }) => {
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-2"
               style={{ backgroundColor: tool.color }}
             >
-              <span className="text-2xl">{tool.icon}</span>
+              <span className="text-3xl text-white">{tool.icon}</span>
             </div>
             <span className="text-xs font-medium text-gray-700 text-center">{tool.name}</span>
           </div>
