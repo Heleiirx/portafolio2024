@@ -16,7 +16,7 @@ export default function Encriptador(){
     return(
     <div className="flex flex-col min-h-screen pt-16 relative">
         <div className="flex flex-col gap-4 items-center relative lg:flex-row lg:justify-evenly lg:items-start">
-            <h1 className="text-5xl lg:text-6xl font-mono" style={{color:`#${encriptador.primaryColor}`}}>{encriptador.title}</h1>
+            <h1 className="text-5xl lg:text-6xl" style={{color:`#${encriptador.primaryColor}`}}>{encriptador.title}</h1>
             <article className="font-mono w-3/4 text-lg lg:w-1/2 lg:text-xl lg:pb-14">{encriptador.description}</article>
             <ProyectLinks page={encriptador.pageURL} repo={encriptador.repoURL} bgcolor={encriptador.primaryColor} className="lg:w-1/2 lg:absolute lg:bottom-0 lg:right-12 justify-evenly w-screen"/>
         </div>

@@ -23,7 +23,7 @@ export default function Nooks(){
     </div>
     <div className="h-screen relative flex flex-col items-center overflow-y-hidden">
         <div className="relative flex flex-col pr-10 gap-4 w-screen z-10 lg:mt-16">
-            <h1 className="w-1/2 text-5xl lg:text-6xl text-right self-end font-mono" style={{color:`#${primaryColor}`}}>{nooks.title}</h1>
+            <h1 className="w-1/2 text-5xl lg:text-6xl text-right self-end" style={{color:`#${primaryColor}`}}>{nooks.title}</h1>
             <article className="text-right w-3/4 self-end font-mono text-lg lg:text-xl lg:w-1/2">{nooks.description}</article>
             <ProyectLinks page={nooks.pageURL} repo={nooks.repoURL} bgcolor={primaryColor} className="justify-evenly w-screen lg:w-2/5 lg:self-end lg:gap-1" />
         </div>
