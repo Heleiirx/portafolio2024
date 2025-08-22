@@ -23,10 +23,9 @@ const Tools: React.FC<ToolsProps> = ({ tools }) => {
             className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
             <div 
-              className="w-12 h-12 rounded-lg flex items-center justify-center mb-2"
-              style={{ backgroundColor: tool.color }}
+              className="w-12 h-12 rounded-lg flex items-center justify-center mb-2 border border-primary"
             >
-              <span className="text-3xl text-white">{tool.icon}</span>
+              <span className="text-3xl text-primary">{tool.icon}</span>
             </div>
             <span className="text-xs font-medium text-gray-700 text-center">{tool.name}</span>
           </div>
