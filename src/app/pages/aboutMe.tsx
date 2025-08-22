@@ -24,9 +24,9 @@ export default function AboutMe( { id, setActiveSection  }:PageProps ){
         lg:justify-between lg:flex-row lg:gap-8">
             <div className="flex flex-col w-11/12 h-full gap-y-2 justify-between items-center
             lg:w-1/2">
-                <h1 className="w-3/4 text-6xl lg:w-5/6">HOLA,</h1>
-                <h2 className="w-3/4 text-6xl lg:w-5/6">Soy Itzel!</h2>
-                <p className="font-mono w-3/4 text-lg lg:w-5/6"> 
+                <h1 className="w-3/4 text-5xl lg:w-5/6">HOLA,</h1>
+                <h2 className="w-3/4 text-5xl lg:w-5/6">Soy Itzel!</h2>
+                <p className="font-mono w-3/4 text-lg lg:w-5/6 text-lg"> 
                 Desarrolladora jr con experiencia en interfaces web, bases de datos y configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una buena gestion de tiempos.
                 {/* Desarrolladora jr con experiencia en React, JavaScript, CSS, TypeScript y bases de datos, así como la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos. */}
                 </p>
