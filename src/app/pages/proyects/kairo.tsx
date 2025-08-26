@@ -1,6 +1,8 @@
 import { useContext } from "react";
+import Image from "next/image";
 import { proyectsArr } from "../../contexts/proyectsContext";
 import ProyectLinks from "../../components/proyectLinks";
+import kairoDesk from '@/img/Dashboard.png';
 
 export default function Kairo(){
 
@@ -15,7 +17,9 @@ export default function Kairo(){
                 <p className="text-sm font-mono">{kairo.description}</p>
                 <ProyectLinks page={kairo.pageURL} repo={kairo.repoURL} figma={kairo.figmaURL} bgcolor={kairo.primaryColor} className='flex-col self-start gap-4 mt-4' />
             </div>
-            <div className="bg-secondary w-3/5 min-h-20"></div>
+            <div className="bg-secondary w-3/5 min-h-20 flex flex-col gap-1 p-4">
+                <Image alt="Kairo Dashboard" src={kairoDesk} className="w-full h-auto"/>
+            </div>
         </div>
     )
 }
