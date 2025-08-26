@@ -24,6 +24,25 @@ interface proyect{
 
 export const proyectsArr = createContext<proyect[]>([
     {
+        title:'Kairo',
+        description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse cupiditate unde ipsa beatae consequatur inventore quia aliquam id distinctio placeat quasi, eos voluptates voluptate delectus neque cumque perspiciatis magnam.',
+        primaryColor:'364C85',
+        skills:['HTML','CSS','JavaScript','Git','Github'],
+        colors:[
+            {color:'kairo1',
+            rgb:'364C85'},
+            {color:'kairo2',
+            rgb:'95B2EE'},
+            {color:'kairo3',
+            rgb:'1E2A38'},
+            {color:'kairo4',
+            rgb:'CDFF9A'},
+        ],
+        repoURL:'https://github.com/Heleiirx/kairo',
+        pageURL:'https://kairo-nu.vercel.app/',
+        figmaURL:'https://www.figma.com/design/LK0NBnSve1pLdu8MZyQMRy/Kairo?node-id=8-327&t=JK9p426625xp206l-1',
+    },
+    {
         title:'Encriptador',
         description:'Aplicacion que toma las vocales del texto ingresado y las sustituye por un texto determinado, tambien puede desencriptar texto encriptado en la misma aplicación.',
         primaryColor:'0A3871',
