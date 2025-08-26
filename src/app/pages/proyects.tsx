@@ -5,6 +5,7 @@ import Encriptador from "./proyects/encriptador";
 import Nooks from "./proyects/nooks";
 import HStube from "./proyects/hstube";
 import { PageProps } from "../utils/types";
+import Kairo from "./proyects/kairo";
 
 export default function Proyects( { id, setActiveSection }: PageProps ){
     const ref =useRef(null);
@@ -14,7 +15,7 @@ export default function Proyects( { id, setActiveSection }: PageProps ){
 
     return (
         <div ref={ref} id={id} className="flex flex-col h-fit items-center justify-center relative">
-            
+            <Kairo />
             <Encriptador/>
             <Nooks/>
             <HStube/>
