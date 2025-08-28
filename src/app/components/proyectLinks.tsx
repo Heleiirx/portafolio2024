@@ -11,16 +11,16 @@ interface proyectLinksProps{
 
 export default function ProyectLinks({className, bgcolor, page, repo, figma}:proyectLinksProps){
    return(
-    <div className={`flex flex-wrap ${className} `}>
-        <Link size="lg" href={page} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
+    <div className={`flex flex-wrap ${className} items-center justify-center `}>
+    <Link size="lg" href={page} className="lg:text-xl flex gap-1 hover:underline transition-all duration-200 mx-8" style={{color:`#${bgcolor}`}}>
             <FaExternalLinkAlt></FaExternalLinkAlt>
             Página web
         </Link>
-        <Link size="lg" href={repo} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
+    <Link size="lg" href={repo} className="lg:text-xl flex gap-1 hover:underline transition-all duration-200 mx-8" style={{color:`#${bgcolor}`}}>
             <FaGithub></FaGithub>
             Repositorio
         </Link>
-        { ! figma ? null : ( <Link size="lg" href={figma} className="lg:text-2xl" style={{color:`#${bgcolor}`}}>
+    { ! figma ? null : ( <Link size="lg" href={figma} className="lg:text-xl flex gap-1 hover:underline transition-all duration-200 mx-8" style={{color:`#${bgcolor}`}}>
             <FaFigma></FaFigma>
             Diseño Figma
         </Link> )
