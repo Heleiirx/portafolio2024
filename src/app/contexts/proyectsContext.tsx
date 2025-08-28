@@ -6,6 +6,8 @@ interface color{
     rgb:string,
 }
 
+
+
 interface proyect{
     title:string;
     description:string;
@@ -15,6 +17,9 @@ interface proyect{
     figmaURL?:string;
     skills:string[];
     colors:color[];
+    type: 'personal' | 'team';
+    timeline:string;
+    role?:string;
 };
 
 // interface link{
@@ -41,6 +46,9 @@ export const proyectsArr = createContext<proyect[]>([
         repoURL:'https://github.com/Heleiirx/kairo',
         pageURL:'https://kairo-nu.vercel.app/',
         figmaURL:'https://www.figma.com/design/LK0NBnSve1pLdu8MZyQMRy/Kairo?node-id=8-327&t=JK9p426625xp206l-1',
+        type: 'team',
+        timeline: '2 weeks',
+        role: 'Developer'
     },
     {
         title:'Encriptador',
@@ -55,6 +63,8 @@ export const proyectsArr = createContext<proyect[]>([
         ],
         repoURL:'https://github.com/Heleiirx/Portfolio',
         pageURL:'https://heleiirx.github.io/encriptador/',
+        type: 'personal',
+        timeline: '1 week'
     },
     {
         title:'Nook\'s Shop',
@@ -71,6 +81,8 @@ export const proyectsArr = createContext<proyect[]>([
         ],
         repoURL:'https://github.com/Heleiirx/nooks-shop',
         pageURL:'https://heleiirx.github.io/nooks-shop/',
+        type: 'personal',
+        timeline: '3 weeks'
     },
     {
         title:'HStube',
@@ -88,5 +100,7 @@ export const proyectsArr = createContext<proyect[]>([
         repoURL:'https://github.com/Heleiirx/hstube',
         pageURL:'https://hstube.vercel.app/',
         figmaURL:'https://www.figma.com/design/USri0Xho4FHysiwpDxKtv0/HStube?node-id=1-89&t=hsDfFKOn47il8raj-1',
+        type: 'personal',
+        timeline: '1 week'
     },
 ])
