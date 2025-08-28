@@ -17,7 +17,7 @@ export default function Kairo(){
         <div className="w-full h-full flex flex-col lg:flex-row py-4 px-6 lg:px-12 gap-4">
             <div className="w-full lg:w-2/5 min-h-20 flex flex-col gap-1 p-4">
                 <h2 className="text-4xl lg:text-5xl font-bold text-white" style={{color:`#${kairo.primaryColor}`}}>{kairo.title}</h2>
-                <h5 className="text-md font-bold" >{kairo.type}</h5>
+                {kairo.type === 'personal' ?  <h5 className="text-md font-bold" >Personal project</h5> : <h5 className="text-md font-bold" >Team project</h5>} 
                 <p className="text-sm font-mono">{kairo.description}</p>
                 <ProyectLinks page={kairo.pageURL} repo={kairo.repoURL} figma={kairo.figmaURL} bgcolor={kairo.primaryColor} className='flex self-center gap-4 my-4' />
 
