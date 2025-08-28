@@ -11,8 +11,8 @@ export const MyChip = extendVariants(Chip, {
     //   },
     size: {
       sm: {
-        base: "min-w-28 size-28 h-8 text-center gap-1 rounded-full",
-        content: "text-base"
+        base: "min-w-24 py-2 size-28 h-8 text-center gap-1 rounded-full font-mono font-black",
+        content: "text-small"
         // add other slot styles here
       },
       md: {
