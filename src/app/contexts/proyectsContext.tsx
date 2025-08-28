@@ -48,7 +48,7 @@ export const proyectsArr = createContext<proyect[]>([
         figmaURL:'https://www.figma.com/design/LK0NBnSve1pLdu8MZyQMRy/Kairo?node-id=8-327&t=JK9p426625xp206l-1',
         type: 'team',
         timeline: '2 weeks',
-        role: 'Developer'
+        role: 'UX/UI designer | Front End Developer'
     },
     {
         title:'Encriptador',
