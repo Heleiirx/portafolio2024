@@ -103,4 +103,24 @@ export const proyectsArr = createContext<proyect[]>([
         type: 'personal',
         timeline: '1 week'
     },
+    {
+        title:'Red de Vida',
+        description:'Aplicación de streaming que reune videos en una api rest creada con json-server. Permite eliminar, agregar, editar y redireccionar al video',
+        primaryColor:'C42013', 
+        skills:['React','JavaScript','JsonServer','Axios','CSS'],
+        colors:[
+            {color:'rdv1',
+            rgb:'C42013'},
+            {color:'rdv2',
+            rgb:'F4DD51'},
+            {color:'rdv3',
+            rgb:'191919'},
+        ],
+        repoURL:'https://github.com/No-Country-simulation/c23-91-webapp',
+        pageURL:'https://red-de-vida.netlify.app/',
+        figmaURL:'https://www.figma.com/design/3hsArh14PUNMkx0JWfDG1q/App-donaci%C3%B3n-sangre?node-id=0-1&p=f',
+        type: 'team',
+        timeline: '1 week',
+        role: 'UX/UI designer | Front End Developer'
+    },
 ])
