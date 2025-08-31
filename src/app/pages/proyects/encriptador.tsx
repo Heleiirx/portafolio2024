@@ -9,7 +9,7 @@ import mobileImg from '@/img/encriptadorMovile.png'
 
 export default function Encriptador(){
     const proyects = useContext(proyectsArr);
-    const encriptador= proyects[0];
+    const encriptador= proyects[1];
     const colores:object[] = encriptador.colors;
     const primaryColor = encriptador.primaryColor;
 
@@ -17,6 +17,8 @@ export default function Encriptador(){
     <div className="flex flex-col min-h-screen pt-16 relative">
         <div className="flex flex-col gap-4 items-center relative lg:flex-row lg:justify-evenly lg:items-start">
             <h1 className="text-5xl lg:text-6xl" style={{color:`#${encriptador.primaryColor}`}}>{encriptador.title}</h1>
+            <p>{encriptador.type}</p>
+            <p>{encriptador.timeline}</p>
             <article className="font-mono w-3/4 text-lg lg:w-1/2 lg:text-xl lg:pb-14">{encriptador.description}</article>
             <ProyectLinks page={encriptador.pageURL} repo={encriptador.repoURL} bgcolor={encriptador.primaryColor} className="lg:w-1/2 lg:absolute lg:bottom-0 lg:right-12 justify-evenly w-screen"/>
         </div>
