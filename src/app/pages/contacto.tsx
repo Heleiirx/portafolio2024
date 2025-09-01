@@ -20,13 +20,13 @@ export default function Contacto({ id }: PageProps) {
         <div className='h-screen flex flex-col justify-center items-start gap-6 ms-36' ref={ref} id={id}>
             <h2 className='text-6xl text-secondary'>{t('contact.greeting')}</h2>
             <div className="flex gap-8 ">
-                <button className='border border-primary py-2 px-4 rounded bg-primary text-white tracking-wider font-mono font-bold' onClick={() => window.open(gmailHref, '_blank')}>{t('contact.sayHello')}</button>
+                <button className='border border-primary py-2 px-4 rounded bg-primary text-white tracking-wider font-mono font-bold' onClick={() => window.open(gmailHref, '_blank')}>Say hi</button>
                 <span className='flex gap-2 items-center text-primary tracking-wide'> 
                     <span className="relative flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary"></span>
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                     </span>
-                    {t('contact.available')}</span>
+                    Available for work</span>
             </div>
             <div className="flex w-fit gap-4 justify-around text-secondary">
                     <Link size="sm" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-6 hover:animate-bounce" />}></Link>
