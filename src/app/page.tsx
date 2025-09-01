@@ -10,10 +10,11 @@ import Contacto from "./pages/contacto";
 import Footer from "./components/footer";
 
 import { proyectsArr } from "./contexts/proyectsContext";
+import { useLanguage } from "./contexts/LanguageContext";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('');
-
+  const { t } = useLanguage();
   const proyectos = useContext(proyectsArr);
 
  
@@ -23,9 +24,9 @@ export default function Home() {
       <Cover/>
       <AboutMe id='about-me' setActiveSection={setActiveSection} />
       
-      <Banner bannerText=' ☆ FORMACIÓN ACADEMICA' background='bg-secondary'></Banner>
+      <Banner bannerText={t('banners.education')} background='bg-secondary'></Banner>
       <Education id='education' setActiveSection={setActiveSection} />
-      <Banner bannerText=' ☆ MIS PROYECTOS' background='bg-primary'></Banner>
+      <Banner bannerText={t('banners.projects')} background='bg-primary'></Banner>
       <proyectsArr.Provider value={proyectos}>
         <Proyects id='proyects' setActiveSection={setActiveSection} />
       </proyectsArr.Provider>
