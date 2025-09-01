@@ -1,3 +1,5 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 interface listProps{
     content:object[],
     title:string,
@@ -7,6 +9,7 @@ interface listProps{
 }
 
 export default function List({content, title, flexDirection, fatherClass, childClass}:listProps){
+    const { language } = useLanguage();
 
     return(
         <div className={`flex flex-col ${fatherClass}`}>
@@ -19,7 +22,9 @@ export default function List({content, title, flexDirection, fatherClass, childC
                                 <span className="text-purple-500 text-2xl">★</span>
                                 <span className="text-sm font-mono">{item.title}</span>
                             </div>
-                            <h3 className="font-bold text-black text-base leading-tight mb-1">{item.subtitle}</h3>
+                            <h3 className="font-bold text-black text-base leading-tight mb-1">
+                                {typeof item.subtitle === 'object' ? item.subtitle[language] : item.subtitle}
+                            </h3>
                             <p className="italic text-sm font-mono">{item.institution}</p>
                         </div> 
                     )}
