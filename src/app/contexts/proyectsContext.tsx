@@ -6,8 +6,6 @@ interface color{
     rgb:string,
 }
 
-
-
 interface proyect{
     title:string;
     description:string;
@@ -30,9 +28,18 @@ interface proyect{
 export const proyectsArr = createContext<proyect[]>([
     {
         title:'Kairo',
-        description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse cupiditate unde ipsa beatae consequatur inventore quia aliquam id distinctio placeat quasi, eos voluptates voluptate delectus neque cumque perspiciatis magnam.',
+        description:'A full-stack web application for personal organization and project management, inspired by the Pomodoro technique and the philosophy of kairos (opportune time). Features include user authentication with Google OAuth, task creation and management with priority levels, project organization with progress tracking, time management tools, and a modern responsive UI. The app helps users organize their tasks, track time spent on projects, and maintain productivity through structured time management.',
         primaryColor:'364C85',
-        skills:['HTML','CSS','JavaScript','Git','Github'],
+        skills:['React',
+            'TypeScript',
+            'Vite',
+            'Tailwind CSS',
+            'Zustand',
+            'Axios',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+        ],
         colors:[
             {color:'kairo1',
             rgb:'364C85'},
@@ -47,7 +54,7 @@ export const proyectsArr = createContext<proyect[]>([
         pageURL:'https://kairo-nu.vercel.app/',
         figmaURL:'https://www.figma.com/design/LK0NBnSve1pLdu8MZyQMRy/Kairo?node-id=8-327&t=JK9p426625xp206l-1',
         type: 'team',
-        timeline: '2 weeks',
+        timeline: '—On development—',
         role: 'UX/UI designer | Front End Developer'
     },
     {
@@ -86,9 +93,9 @@ export const proyectsArr = createContext<proyect[]>([
     },
     {
         title:'HStube',
-        description:'Aplicación de streaming que reune videos en una api rest creada con json-server. Permite eliminar, agregar, editar y redireccionar al video',
+        description:"Una aplicación web creada con React para explorar una colección de videos de Harry Styles. El proyecto permite ver videos organizados por categorías, añadir nuevos videos y crear nuevas categorías, utilizando una API simulada con json-server.",
         primaryColor:'EF9CA6', 
-        skills:['React','JavaScript','JsonServer','Axios','CSS'],
+        skills:['React','React Router', 'JavaScript','JsonServer','Axios','CSS','HTML', 'Swiper'],
         colors:[
             {color:'hs1',
             rgb:'EF9CA6'},
@@ -101,13 +108,28 @@ export const proyectsArr = createContext<proyect[]>([
         pageURL:'https://hstube.vercel.app/',
         figmaURL:'https://www.figma.com/design/USri0Xho4FHysiwpDxKtv0/HStube?node-id=1-89&t=hsDfFKOn47il8raj-1',
         type: 'personal',
-        timeline: '1 week'
+        timeline: '2 weeks'
     },
     {
         title:'Red de Vida',
-        description:'Aplicación de streaming que reune videos en una api rest creada con json-server. Permite eliminar, agregar, editar y redireccionar al video',
+        description:'A gamified web platform designed to incentivize blood donation through a rewards system and simplified appointment scheduling. The application features user registration and management, appointment scheduling for blood donations, a gamified rewards system where donors earn points and unlock medals, detailed donation history tracking, user profiles with personal information and upcoming appointments, and an informative homepage about blood donation importance. The platform aims to increase blood donation participation by making the process more engaging and accessible.',
         primaryColor:'C42013', 
-        skills:['React','JavaScript','JsonServer','Axios','CSS'],
+        skills:["JavaScript",
+                "HTML5",
+                "CSS3",
+                "Bootstrap",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Mongoose",
+                "JWT",
+                "bcrypt",
+                "SASS",
+                "RESTful APIs",
+                "Postman",
+                "Figma",
+                "Slack"
+            ],
         colors:[
             {color:'rdv1',
             rgb:'C42013'},
@@ -120,7 +142,7 @@ export const proyectsArr = createContext<proyect[]>([
         pageURL:'https://red-de-vida.netlify.app/',
         figmaURL:'https://www.figma.com/design/3hsArh14PUNMkx0JWfDG1q/App-donaci%C3%B3n-sangre?node-id=0-1&p=f',
         type: 'team',
-        timeline: '1 week',
+        timeline: '1 month',
         role: 'UX/UI designer | Front End Developer'
     },
 ])
