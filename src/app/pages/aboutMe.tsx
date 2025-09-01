@@ -31,9 +31,9 @@ export default function AboutMe( { id, setActiveSection  }:PageProps ){
                 {/* Desarrolladora jr con experiencia en React, JavaScript, CSS, TypeScript y bases de datos, así como la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos. */}
                 </p>
                 <div className="flex w-1/2 justify-around">
-                    <Link size="lg" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-9" />}></Link>
-                    <Link size="lg" isExternal showAnchorIcon href="https://github.com/Heleiirx" anchorIcon={<FaGithub className="size-9" />}></Link>
-                    <Link size="lg" isExternal showAnchorIcon href={gmailHref} anchorIcon={<MdEmail className="size-9" />}></Link>
+                    <Link size="lg" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-9 hover:animate-bounce" />}></Link>
+                    <Link size="lg" isExternal showAnchorIcon href="https://github.com/Heleiirx" anchorIcon={<FaGithub className="size-9 hover:animate-bounce" />}></Link>
+                    <Link size="lg" isExternal showAnchorIcon href={gmailHref} anchorIcon={<MdEmail className="size-9 hover:animate-bounce" />}></Link>
                 </div>
             </div>
             <div className="flex flex-col w-11/12 items-center relative
