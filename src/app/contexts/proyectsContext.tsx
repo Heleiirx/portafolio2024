@@ -28,7 +28,7 @@ interface proyect{
 export const proyectsArr = createContext<proyect[]>([
     {
         title:'Kairo',
-        description:'A full-stack web application for personal organization and project management, inspired by the Pomodoro technique and the philosophy of kairos (opportune time). Features include user authentication with Google OAuth, task creation and management with priority levels, project organization with progress tracking, time management tools, and a modern responsive UI. The app helps users organize their tasks, track time spent on projects, and maintain productivity through structured time management.',
+        description:'A full-stack web application for personal organization and project management, inspired by the Pomodoro technique and the philosophy of kairos (opportune time). The app helps users organize their tasks, track time spent on projects, and maintain productivity through structured time management.',
         primaryColor:'364C85',
         skills:['React',
             'TypeScript',
@@ -93,9 +93,17 @@ export const proyectsArr = createContext<proyect[]>([
     },
     {
         title:'HStube',
-        description:"Una aplicación web creada con React para explorar una colección de videos de Harry Styles. El proyecto permite ver videos organizados por categorías, añadir nuevos videos y crear nuevas categorías, utilizando una API simulada con json-server.",
+        description:"A React-based web application for browsing a curated collection of Harry Styles videos. Features include video categorization by albums, live performances, covers, concerts, and interviews. Users can browse videos through responsive carousels, add new videos and categories, edit existing content, and mark favorites. The application uses a mock backend with json-server to simulate a real API, demonstrating full-stack development capabilities with a modern React frontend.",
         primaryColor:'EF9CA6', 
-        skills:['React','React Router', 'JavaScript','JsonServer','Axios','CSS','HTML', 'Swiper'],
+        skills:[
+            "React",
+            "React Router",
+            "Axios",
+            "Swiper",
+            "JSON Server",
+            "CSS",
+            "JavaScript"
+        ],
         colors:[
             {color:'hs1',
             rgb:'EF9CA6'},
@@ -112,23 +120,19 @@ export const proyectsArr = createContext<proyect[]>([
     },
     {
         title:'Red de Vida',
-        description:'A gamified web platform designed to incentivize blood donation through a rewards system and simplified appointment scheduling. The application features user registration and management, appointment scheduling for blood donations, a gamified rewards system where donors earn points and unlock medals, detailed donation history tracking, user profiles with personal information and upcoming appointments, and an informative homepage about blood donation importance. The platform aims to increase blood donation participation by making the process more engaging and accessible.',
+        description:'A gamified web platform designed to incentivize blood donation through a rewards system and simplified appointment scheduling. The platform aims to increase blood donation participation by making the process more engaging and accessible.',
         primaryColor:'C42013', 
         skills:["JavaScript",
                 "HTML5",
-                "CSS3",
+                "SASS",
                 "Bootstrap",
                 "Node.js",
                 "Express.js",
                 "MongoDB",
                 "Mongoose",
                 "JWT",
-                "bcrypt",
-                "SASS",
                 "RESTful APIs",
                 "Postman",
-                "Figma",
-                "Slack"
             ],
         colors:[
             {color:'rdv1',
