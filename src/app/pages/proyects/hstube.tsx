@@ -1,19 +1,20 @@
 import { useContext } from "react";
 import Image from "next/image";
-import ProyectColors from "../../components/proyectColors";
 import ProyectLinks from "../../components/proyectLinks";
 import ProyectSkills from "../../components/proyectSkills";
 import { proyectsArr } from "../../contexts/proyectsContext";
-import hsDesk from '@/img/hstubeDesktop.png';
 import VerticalCarousel from "../../components/VerticalCarousel";
 import { HstubeArr } from "../../contexts/carouselArr";
 import hstDesktop from '@/img/hst_desktop.png';
+import { useLanguage } from "@/app/contexts/LanguageContext";
 
 export default function HStube(){
     const proyects = useContext(proyectsArr);
     const hstube = proyects[3];
     const colors:object[] = hstube.colors;
     const primaryColor:string = hstube.primaryColor;
+
+    const {t, language} = useLanguage();
 
     return(
         <div className="pt-6 relative h-screen lg:flex mt-12" >
@@ -27,12 +28,12 @@ export default function HStube(){
             </div>
             <div className="flex flex-col px-12 gap-5 lg:basis-2/3 lg:gap-3 lg:pb-4">
                 <h1 className='text-4xl lg:text-5xl font-bold text-white' style={{color:`#${primaryColor}`}} >{hstube.title}</h1>
-                {hstube.type === 'personal' ?  <h5 className="text-md font-bold" >Personal project</h5> : <h5 className="text-md font-bold" >Team project</h5>} 
+                {hstube.type === 'personal' ?  <h5 className="text-md font-bold" >{t('projects.personalProject')}</h5> : <h5 className="text-md font-bold" >{t('projects.teamProject')}</h5>} 
                 <span className="flex gap-6">
-                    <h5 className="text-md font-bold" >Timeline</h5>
+                    <h5 className="text-md font-bold" >{t('projects.timeline')}</h5>
                     <p className="text-sm font-mono">{hstube.timeline}</p>
                 </span>
-                <article className="text-sm font-mono">{hstube.description}</article>
+                <article className="text-sm font-mono">{typeof hstube.description === 'object' ? hstube.description[language] : hstube.description}</article>
                 <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} figma={hstube.figmaURL} bgcolor={primaryColor} className='flex self-center gap-4 my-4' />
                 <Image src={hstDesktop} alt='Screenshot HStube desktop' className="skew-y-3 w-4/5" />
             </div>
