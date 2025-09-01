@@ -51,7 +51,7 @@ export const proyectsArr = createContext<proyect[]>([
             rgb:'CDFF9A'},
         ],
         repoURL:'https://github.com/Heleiirx/kairo',
-        pageURL:'https://kairo-nu.vercel.app/',
+        pageURL:'https://kairo-self.vercel.app/',
         figmaURL:'https://www.figma.com/design/LK0NBnSve1pLdu8MZyQMRy/Kairo?node-id=8-327&t=JK9p426625xp206l-1',
         type: 'team',
         timeline: '—On development—',
