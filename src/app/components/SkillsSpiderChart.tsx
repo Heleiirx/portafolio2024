@@ -4,26 +4,19 @@ import { motion } from 'framer-motion';
 import { hardSkills, softSkills } from '../contexts/skillsData';
 import { Skills } from '../utils/types';
 
-const MAX_SIDES = 8;
-const SIZE = 280;
+const SIZE = 320; // Increased size to accommodate labels better
 const CENTER = SIZE / 2;
-const RADIUS = SIZE / 2 - 50;
+const RADIUS = SIZE / 2 - 60; // Adjusted radius to leave more space for labels
 
 const SkillsSpiderChart: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hard' | 'soft'>('hard');
 
   const chartData = useMemo(() => {
     const skills = activeTab === 'hard' ? hardSkills : softSkills;
-    const angleStep = (2 * Math.PI) / MAX_SIDES;
+    const numSides = skills.length;
+    const angleStep = (2 * Math.PI) / numSides;
 
-    // Pad skills to always have 8 points for octagon shape
-    let skillsToDraw: Skills[] = skills;
-    if (skills.length < MAX_SIDES) {
-      const padding: Skills[] = Array(MAX_SIDES - skills.length).fill({ name: '', level: 0 });
-      skillsToDraw = [...skills, ...padding];
-    }
-
-    const points = skillsToDraw.map((skill, i) => {
+    const points = skills.map((skill, i) => {
       const angle = angleStep * i - Math.PI / 2;
       const r = (skill.level / 5) * RADIUS;
       const x = CENTER + r * Math.cos(angle);
@@ -33,24 +26,25 @@ const SkillsSpiderChart: React.FC = () => {
 
     const labels = skills.map((skill, i) => {
         const angle = angleStep * i - Math.PI / 2;
-        const labelRadius = RADIUS + 20;
+        const labelRadius = RADIUS + 30; // Increased distance for better visibility
         const x = CENTER + labelRadius * Math.cos(angle);
         const y = CENTER + labelRadius * Math.sin(angle);
-        return { x, y, name: skill.name };
+        return { x, y, name: skill.name, angle };
     });
 
-    return { points, labels };
+    return { points, labels, numSides };
   }, [activeTab]);
 
   const renderGrid = () => {
-    const angleStep = (2 * Math.PI) / MAX_SIDES;
+    const numSides = chartData.numSides;
+    const angleStep = (2 * Math.PI) / numSides;
     const levels = 5;
     const grid = [];
 
-    // Concentric octagons for grid
+    // Concentric polygons for grid (dynamic shape based on number of skills)
     for (let level = 1; level <= levels; level++) {
         const r = (level / levels) * RADIUS;
-        const points = Array.from({ length: MAX_SIDES }).map((_, i) => {
+        const points = Array.from({ length: numSides }).map((_, i) => {
             const angle = angleStep * i - Math.PI / 2;
             const x = CENTER + r * Math.cos(angle);
             const y = CENTER + r * Math.sin(angle);
@@ -69,7 +63,7 @@ const SkillsSpiderChart: React.FC = () => {
     }
 
     // Lines from center to vertices
-    for (let i = 0; i < MAX_SIDES; i++) {
+    for (let i = 0; i < numSides; i++) {
         const angle = angleStep * i - Math.PI / 2;
         const x = CENTER + RADIUS * Math.cos(angle);
         const y = CENTER + RADIUS * Math.sin(angle);
@@ -143,41 +137,49 @@ const SkillsSpiderChart: React.FC = () => {
             {/* Data points */}
             {chartData.labels.map((label, i) => {
               const skills = activeTab === 'hard' ? hardSkills : softSkills;
-              if (i < skills.length) {
-                const angleStep = (2 * Math.PI) / MAX_SIDES;
-                const angle = angleStep * i - Math.PI / 2;
-                const r = (skills[i].level / 5) * RADIUS;
-                const pointX = CENTER + r * Math.cos(angle);
-                const pointY = CENTER + r * Math.sin(angle);
-                
-                return (
-                  <circle
-                    key={`point-${i}`}
-                    cx={pointX}
-                    cy={pointY}
-                    r="4"
-                    fill={activeTab === 'hard' ? "#a855f7" : "#ec4899"}
-                    stroke="white"
-                    strokeWidth="2"
-                  />
-                );
-              }
-              return null;
+              const angleStep = (2 * Math.PI) / skills.length;
+              const angle = angleStep * i - Math.PI / 2;
+              const r = (skills[i].level / 5) * RADIUS;
+              const pointX = CENTER + r * Math.cos(angle);
+              const pointY = CENTER + r * Math.sin(angle);
+              
+              return (
+                <motion.circle
+                  key={`point-${i}`}
+                  cx={pointX}
+                  cy={pointY}
+                  r="4"
+                  fill={activeTab === 'hard' ? "#a855f7" : "#ec4899"}
+                  stroke="white"
+                  strokeWidth="2"
+                  animate={{ cx: pointX, cy: pointY }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+              );
             })}
             {/* Labels */}
-            {chartData.labels.map((label, i) => (
-              <text 
-                key={`label-${i}`} 
-                x={label.x} 
-                y={label.y} 
-                textAnchor="middle" 
-                dominantBaseline="middle"
-                className="text-xs font-medium fill-gray-700"
-                style={{ fontSize: '11px' }}
-              >
-                {label.name}
-              </text>
-            ))}
+            {chartData.labels.map((label, i) => {
+              // Adjust text anchor based on position to prevent overlap
+              let textAnchor: "start" | "middle" | "end" = "middle";
+              if (label.x < CENTER - 10) textAnchor = "end";
+              else if (label.x > CENTER + 10) textAnchor = "start";
+              
+              return (
+                <motion.text 
+                  key={`label-${i}-${activeTab}`} // Include activeTab in key to force re-render
+                  x={label.x} 
+                  y={label.y} 
+                  textAnchor={textAnchor}
+                  dominantBaseline="middle"
+                  className="text-xs font-medium fill-gray-700"
+                  style={{ fontSize: '10px', fontWeight: '500' }}
+                  animate={{ x: label.x, y: label.y }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                >
+                  {label.name}
+                </motion.text>
+              );
+            })}
           </svg>
         </div>
       </div>
