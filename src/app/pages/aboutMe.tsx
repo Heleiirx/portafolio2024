@@ -2,20 +2,23 @@ import React, { useRef } from "react";
 import { FaLinkedin, FaGithub   } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import {Link} from "@nextui-org/link";
-import Yo from '@/img/Yo.svg';
 import meAvatar from '@/img/me_avatar.png';
 import Image from 'next/image';
 import { NavbarScroll } from "../utils/AnimationUtils";
 import { PageProps } from "../utils/types";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function AboutMe( { id, setActiveSection  }:PageProps ){
     const ref =useRef(null);
+    const { t, language } = useLanguage();
 
     //Funcion que activa el cambio de elemento activo en abrra de navegación
     NavbarScroll({id, setActiveSection, ref});
     
     const email = "itzelvargas2002@gmail.com";
-    const subject = "Me gustaría saber más sobre tu trabajo.";
+    const subject = language === 'en' 
+        ? "I'd like to know more about your work." 
+        : "Me gustaría saber más sobre tu trabajo.";
     const body = "";
     const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -25,11 +28,10 @@ export default function AboutMe( { id, setActiveSection  }:PageProps ){
         lg:justify-between lg:flex-row">
             <div className="flex flex-col w-11/12 h-full gap-y-2 justify-between items-center
             lg:w-1/2">
-                <h1 className="w-3/4 text-5xl lg:w-5/6">HOLA,</h1>
-                <h2 className="w-3/4 text-5xl lg:w-5/6">Soy Itzel!</h2>
+                <h1 className="w-3/4 text-5xl lg:w-5/6">{t('about.greeting')}</h1>
+                <h2 className="w-3/4 text-5xl lg:w-5/6">{t('about.name')}</h2>
                 <p className="font-mono w-3/4 text-lg lg:w-5/6 text-lg"> 
-                A software engineering student and web developer passionate about creating technology that makes a difference. I enjoy designing and building user-friendly interfaces while also exploring backend development and integrations with modern tools like AI. I thrive in agile, team-based environments that encourage creativity, problem-solving, and continuous learning.
-                {/* Desarrolladora jr con experiencia en React, JavaScript, CSS, TypeScript y bases de datos, así como la configuración de infraestructuras sencillas en la nube. Destacaría mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi creatividad para encontrar soluciones. Tambien he tomado formaciones en metodologias agiles, lo que me permite integrarme de manera mas eficiente a nuevos equipos y tener una mejor gestion de tiempos. */}
+                {t('about.description')}
                 </p>
                 <div className="flex w-1/2 justify-around">
                     <Link size="lg" isExternal showAnchorIcon href="https://www.linkedin.com/in/itzel-romero/" anchorIcon={<FaLinkedin className="size-9 hover:animate-bounce" />}></Link>
