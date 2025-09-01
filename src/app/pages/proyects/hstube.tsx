@@ -7,6 +7,7 @@ import { proyectsArr } from "../../contexts/proyectsContext";
 import hsDesk from '@/img/hstubeDesktop.png';
 import VerticalCarousel from "../../components/VerticalCarousel";
 import { HstubeArr } from "../../contexts/carouselArr";
+import hstDesktop from '@/img/hst_desktop.png';
 
 export default function HStube(){
     const proyects = useContext(proyectsArr);
@@ -33,7 +34,7 @@ export default function HStube(){
                 </span>
                 <article className="text-sm font-mono">{hstube.description}</article>
                 <ProyectLinks page={hstube.pageURL} repo={hstube.repoURL} figma={hstube.figmaURL} bgcolor={primaryColor} className='flex self-center gap-4 my-4' />
-                <Image src={hsDesk} alt='Screenshot HStube desktop' className="-translate-x-20 z-0 -translate-y-20 lg:-translate-x-0 lg:-translate-y-0 lg:w-9/12" />
+                <Image src={hstDesktop} alt='Screenshot HStube desktop' className="skew-y-3 w-4/5" />
             </div>
         </div>
     );
