@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Tool {
   id: number;
@@ -12,9 +13,11 @@ interface ToolsProps {
 }
 
 const Tools: React.FC<ToolsProps> = ({ tools }) => {
+  const { t, language } = useLanguage();
+
   return (
     <div className="w-full">
-      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-black uppercase tracking-wider">HERRAMIENTAS</h2>
+      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-black uppercase tracking-wider">{t('education.tools')}</h2>
       
       <div className="grid grid-cols-4 gap-4">
         {tools.map((tool) => (

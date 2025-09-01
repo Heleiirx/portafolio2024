@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Language {
   id: number;
@@ -11,9 +12,11 @@ interface LanguagesProps {
 }
 
 const Languages: React.FC<LanguagesProps> = ({ languages }) => {
+  const {t, language} = useLanguage();
+
   return (
     <div className="w-full">
-      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-black uppercase tracking-wider">IDIOMAS</h2>
+      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-black uppercase tracking-wider">{t('education.languages')}</h2>
       
       <div className="space-y-4">
         {languages.map((language) => (
