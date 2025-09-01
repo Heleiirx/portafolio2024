@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { NavbarScroll } from "@/app/utils/AnimationUtils";
 import Banner from "@/app/components/banner";
-import Encriptador from "./proyects/encriptador";
-import Nooks from "./proyects/nooks";
 import HStube from "./proyects/hstube";
 import { PageProps } from "../utils/types";
 import Kairo from "./proyects/kairo";
