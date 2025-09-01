@@ -15,8 +15,9 @@ export const hardSkills: Skills[] = [
 export const softSkills: Skills[] = [
     { name: "Comunicación", level: 4 },
     { name: "Trabajo en equipo", level: 4 },
+    { name: "Creatividad", level: 5 },
     { name: "Problem solving", level: 3 },
     { name: "Liderazgo", level: 3 },
-    { name: "Pensamiento crítico", level: 4 },
+    { name: "Gestión de tiempo", level: 3 },
     { name: "Adaptabilidad", level: 3 },
 ];
