@@ -5,8 +5,11 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@nextui-or
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { montserrat } from "../ui/fonts";
 import { TbWorld } from "react-icons/tb";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Navegacion( activeSection:any ) {
+  const { t } = useLanguage();
 
   interface link{
     key:number,
@@ -14,43 +17,27 @@ export default function Navegacion( activeSection:any ) {
     href:string,
   }
 
-  interface idiom{
-    key:string,
-    label: string,
-  }
-
   const sectionsArr:link[] =[
     {
       key: 1,
-      title: 'Sobre Mi',
+      title: t('navigation.about'),
       href: 'about-me',
     },
     {
       key: 2,
-      title: 'Formación',
+      title: t('navigation.education'),
       href: 'education',
     },
     {
       key: 3,
-      title: 'Proyectos',
+      title: t('navigation.projects'),
       href: 'proyects',
     },
     {
       key: 4,
-      title: 'Contacto',
+      title: t('navigation.contact'),
       href: 'contact',
     },
-  ]
-
-  const idioms: idiom[]=[
-    {
-      key:'default',
-      label:'Español'
-    },
-    {
-      key:'k2',
-      label:'English'
-    }
   ]
 
   return (
@@ -77,23 +64,11 @@ export default function Navegacion( activeSection:any ) {
       }
 
       </NavbarContent>
-      {/* <Dropdown>
-        <DropdownTrigger>
-        <Button isIconOnly variant="light" aria-label="Select language">
-          <TbWorld />
-        </Button>
-        </DropdownTrigger>
-        <DropdownMenu aria-label="Dynamic Actions" items={idioms} selectedKeys={["default"]}>
-        {(idiom) => (
-          <DropdownItem
-            key={idiom.key}
-            color={"default"}
-          >
-            {idiom.label}
-          </DropdownItem>
-        )}
-      </DropdownMenu>
-      </Dropdown> */}
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <LanguageSwitcher />
+        </NavbarItem>
+      </NavbarContent>
     </Navbar>
     </div>
   );
