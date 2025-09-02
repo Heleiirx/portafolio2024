@@ -4,9 +4,13 @@ import { Link } from "@nextui-org/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useLanguage } from '../contexts/LanguageContext';
+import { NavbarScroll } from '../utils/AnimationUtils';
 
-export default function Contacto({ id }: PageProps) {
+export default function Contacto({ id, setActiveSection }: PageProps) {
     const ref = useRef<HTMLDivElement | null>(null);
+    //Funcion que activa el cambio de elemento activo en abrra de navegación
+    NavbarScroll({id, setActiveSection, ref});
+
     const { t, language } = useLanguage();
 
     const email = "itzelvargas2002@gmail.com";
@@ -17,7 +21,7 @@ export default function Contacto({ id }: PageProps) {
     const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     return (
-        <div className='h-screen flex flex-col justify-center items-start gap-6 ms-36' ref={ref} id={id}>
+        <div ref={ref} id={id} className='h-screen flex flex-col justify-center items-start gap-6 ps-36'>
             <h2 className='text-6xl text-secondary'>{t('contact.greeting')}</h2>
             <div className="flex gap-8 ">
                 <button className='border border-primary py-2 px-4 rounded bg-primary text-white tracking-wider font-mono font-bold' onClick={() => window.open(gmailHref, '_blank')}>Say hi</button>
